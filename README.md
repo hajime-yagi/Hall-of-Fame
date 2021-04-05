@@ -27,5 +27,8 @@
 ## マーケット
 プロ野球ファン
 
-# 画面遷移図
+## 画面遷移図
 https://xd.adobe.com/view/39257fa8-7643-4bfe-ad87-971adbe34de5-6c76/
+
+## ER図
+https://drive.google.com/file/d/15K_T5DFw8jVziOJay8tUN5BqkJ5Y6A6o/view?usp=sharing
