@@ -6,8 +6,10 @@ class ProfilesController < ApplicationController
    def update
     if @user.update(user_params)
        redirect_to profile_path
+       flash[:success]= 'ユーザーを更新しました'
      else
        render :edit
+       flash[:danger] = 'ユーザーを更新できませんでした'
      end
    end
  

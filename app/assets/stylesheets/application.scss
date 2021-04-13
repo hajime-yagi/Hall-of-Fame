@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- 
+ @import 'toastr';
  @import "bootstrap-sprockets";
  @import "bootstrap";
  * {
@@ -273,7 +273,7 @@ footer .sns .tw {
 body {
   background-color: #000003;
   background-image: url(aaa.jpg);
-  background-color:rgba(255,255,255,0.4);
+  background-color:rgba(12, 5, 5, 0.4);
   background-blend-mode:lighten;
   background-position: center center;
   background-repeat: no-repeat;
