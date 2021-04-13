@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ 
  @import "bootstrap-sprockets";
  @import "bootstrap";
  * {
@@ -81,7 +82,7 @@ input {
 .cp_fullscreenmenu .menu ul li:hover {
   background: #e9d6d6;
 }
-/*クリックしたらメニューが開閉の動作*/
+
 .cp_fullscreenmenu .menuEffects {
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s;
@@ -123,7 +124,7 @@ input {
 .cp_fullscreenmenu #menuToggle:not(:checked) ~ .menuEffects ul {
   transform: translateY(-30%);
 }
-/*ハンバーガー*/
+
 .cp_fullscreenmenu .hamburger {
   position: relative;
   top: 0;
@@ -268,4 +269,14 @@ footer .sns .fb {
 }
 footer .sns .tw {
 	background-color: #55acee;
+}
+body {
+  background-color: #000003;
+  background-image: url(aaa.jpg);
+  background-color:rgba(255,255,255,0.4);
+  background-blend-mode:lighten;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
