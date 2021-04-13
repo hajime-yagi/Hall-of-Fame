@@ -1,14 +1,19 @@
-
+<% content_for(:title, 'ユーザー一覧') %>
 <h1>ユーザー一覧</h1>
-
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.name%></td>
-        <td><%= user.email %></td>
-        <td><%= link_to 'Show', profile_path %></td>
-        <td><%= link_to 'Edit', edit_profile_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+        <% if user.avatar? %>
+        <%= image_tag user.avatar.url,
+                      class: 'rounded-circle',
+                      id: 'preview',
+                      size: '50x50' %>
+        <% else %>
+        <%= image_tag "/assets/player.jpg", :size => '50x50' %>
+        <% end %>
+        </td>
+        <%= link_to  user.name  ,profile_path(user) %>
       </tr>
     <% end %>
   </tbody>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'static_pages#top'
   get '/login' => 'user_sessions#new'
   post '/login' => 'user_sessions#create'
-  post '/logout' => 'user_sessions#destroy'
+  delete '/logout' => 'user_sessions#destroy'
   resources :users
   resource :profile, only: %i[show edit update]
 

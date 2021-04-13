@@ -1,7 +1,9 @@
 class ProfilesController < ApplicationController
   before_action :set_user, only: %i[edit update]
    
-   def edit; end
+   def edit
+    @user = User.find(current_user.id)
+   end
  
    def update
     if @user.update(user_params)
@@ -11,13 +13,13 @@ class ProfilesController < ApplicationController
      end
    end
  
-   def show; end
+   def show
+    @user = User.find_by(id: params[:id])
+   end
  
    private
  
-   def set_user
-     @user = User.find(current_user.id)
-   end
+  
  
    def user_params
      params.require(:user).permit(:name,:email,:introduction,:favorite_team,:avatar)
