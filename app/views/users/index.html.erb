@@ -1,0 +1,23 @@
+<% content_for(:title, 'ユーザー一覧') %>
+<h1>ユーザー一覧</h1>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td>
+        <% if user.avatar? %>
+        <%= image_tag user.avatar.url,
+                      class: 'rounded-circle',
+                      id: 'preview',
+                      size: '50x50' %>
+        <% else %>
+        <%= image_tag "/assets/player.jpg", :size => '50x50' %>
+        <% end %>
+        </td>
+        <%= link_to  user.name  ,user_path(user) %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

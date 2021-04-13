@@ -9,10 +9,10 @@
 <label for="menuToggle"></label>
 <div class="menucont">
 	<ul>
-		<li><%= link_to 'Login' %></li>
-		<li><a href="#">Signup</a></li>
-		<li><a href="#"></a>Policy</li>
-		<li><a href="#"></a>Contact</li>
+		<li><%= link_to '予想ページ' %></li>
+		<li><%= link_to 'ユーザー一覧',users_path %></li>
+		<li><%= link_to 'マイページ',profile_path(@user) %></li>
+		<li><%= link_to 'ログアウト', logout_path,  method: :delete %></li>
 	</ul>
 </div>
 </div>
