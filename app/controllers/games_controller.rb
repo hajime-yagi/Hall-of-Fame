@@ -5,69 +5,117 @@ class GamesController < ApplicationController
     page = agent.get("https://baseball.yahoo.co.jp/npb/schedule/")
    
      
-    @match1 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[1]/a/div[1]").inner_text
+    @team1 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[1]/a/div[1]/p[1]").inner_text
+    @team2 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[1]/a/div[1]/p[2]").inner_text
+    @team3 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[2]/a/div[1]/p[1]").inner_text
+    @team4 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[2]/a/div[1]/p[2]").inner_text
+    @team5 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[3]/a/div[1]/p[1]").inner_text
+    @team6 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[3]/a/div[1]/p[2]").inner_text
+    @team7 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[1]/p[1]").inner_text
+    @team8 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[1]/p[2]").inner_text
+    @team9 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[1]/p[1]").inner_text
+    @team10 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[1]/p[2]").inner_text
+    @team11 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[1]/p[1]").inner_text
+    @team12 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[1]/p[2]").inner_text
+
+
+
     @stadium1 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[1]/a/p/span").inner_text
-    @time1 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[1]/a/div[2]/div/time").inner_text
-
-
-    @match2 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[2]/a/div[1]").inner_text
     @stadium2 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[2]/a/p/span").inner_text
-    @time2 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[2]/a/div[2]/div/time").inner_text
-    
-
-    @match3 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[3]/a/div[1]").inner_text
     @stadium3 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[3]/a/p/span").inner_text
-    @time3 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[3]/a/div[2]/div/time").inner_text
-
-    @match4 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[1]").inner_text
     @stadium4 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/p/span").inner_text
-    @time4 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[2]/div/time").inner_text
-
-    @match5 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[1]").inner_text
     @stadium5 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/p/span").inner_text
-    @time5 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[2]/div/time").inner_text
-
-    @match6 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[1]").inner_text
     @stadium6 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/p/span").inner_text
+
+
+   
+    if !@time1.nil?
+    @time1 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[1]/a/div[2]/div/time").inner_text
+    else  
+      @time1 = nil
+    end
+
+    if !@time2.nil?
+      @time2 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[2]/a/div[2]/div/time").inner_text
+    else  
+     @time2 = nil
+    end
+
+    if !@time3.nil?
+    @time3 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[3]/a/div[2]/div/time").inner_text
+    else
+      @time3 = nil
+    end
+
+    if !@time4.nil?
+    @time4 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[2]/div/time").inner_text
+    else
+      @time4 = nil
+    end
+
+    if !@time5.nil?
+    @time5 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[2]/div/time").inner_text
+    else
+      @time5 = nil
+    end
+
+    if !@time6.nil?
     @time6 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/div/time").inner_text
+    else
+      @time6 = nil
+    end
+   
     
+    
+
+
+
+
+
+
     @games = Game.new     
-    @games.match = @match1
+    @games.team_a = @team1
+    @games.team_b = @team2
     @games.stadium = @stadium1
     @games.match_time = @time1
     @games.save
 
     @games = Game.new     
-    @games.match = @match2
+    @games.team_a = @team3
+    @games.team_b = @team4
     @games.stadium = @stadium2
     @games.match_time = @time2
     @games.save
 
     @games = Game.new     
-    @games.match = @match3
+    @games.team_a = @team5
+    @games.team_b = @team6
     @games.stadium = @stadium3
     @games.match_time = @time3
     @games.save
 
     @games = Game.new     
-    @games.match = @match4
+    @games.team_a = @team7
+    @games.team_b = @team8
     @games.stadium = @stadium4
     @games.match_time = @time4
     @games.save
 
     @games = Game.new     
-    @games.match = @match5
+    @games.team_a = @team9
+    @games.team_b = @team10
     @games.stadium = @stadium5
     @games.match_time = @time5
     @games.save
 
     @games = Game.new     
-    @games.match = @match6
+    @games.team_a = @team11
+    @games.team_b = @team12
     @games.stadium = @stadium6
     @games.match_time = @time6
     @games.save
     
 
-    @games = Game.todays_match
+    @games = Game.recent
   end
 end

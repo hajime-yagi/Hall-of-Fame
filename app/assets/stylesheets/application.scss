@@ -380,5 +380,12 @@ header .headline{
   display: inline-block;
   margin: 0 50px;
 }
-
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+  padding: 30px;  /* 5px の値を変更 */
+}
 
