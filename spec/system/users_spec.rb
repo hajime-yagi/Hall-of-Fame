@@ -39,11 +39,7 @@ RSpec.describe "Users", type: :system do
             expect(current_page).to eq login_path
             expect(page).to have_content 'ユーザーを作成できませんでした'
           end
+       end
+     end
     end
-  end
 
-
-
-      
-  
-end
