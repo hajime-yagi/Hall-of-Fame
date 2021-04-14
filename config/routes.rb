@@ -8,5 +8,4 @@ Rails.application.routes.draw do
   resources :users
   resource :profile, only: %i[show edit update]
   resources :games
-
 end

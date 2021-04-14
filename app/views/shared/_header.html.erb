@@ -1,9 +1,9 @@
 <header>
     <h1 class="headline">
-      <a>HALL OF FAME</a>
+      <%= link_to "HALL OF FAME", root_path %>
     </h1>
     <ul class="nav-list">
-			<li class="nav-list-item"><%= link_to "本日の試合" %></li>
+			<li class="nav-list-item"><%= link_to "本日の試合", games_path %></li>
       <li class="nav-list-item"><%= link_to "ランキング" %></li>
       </li>
     </ul>

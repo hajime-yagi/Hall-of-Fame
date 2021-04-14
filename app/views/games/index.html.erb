@@ -1,2 +1,57 @@
-<h1>Games#index</h1>
-<p>Find me in app/views/games/index.html.erb</p>
+<font color="yellow">
+<div class="text-center">
+<br>
+ <br>
+ <% if @game1.nil? %>
+ <%= Date.today %>
+ 試合はありません 
+ <% else %>
+ <%= Date.today %>
+ <br>
+ <br>
+  <%= @game1.stadium %>
+  <br>
+  <%= @game1.match %>
+  <br>
+  <%= link_to '予想する'%>
+ <br>
+ <br>
+ <br>
+  <%= @game2.stadium %>
+  <br>
+  <%= @game2.match %>
+  <br>
+  <%= link_to "予想する" %>
+ <br>
+ <br>
+ <br>
+  <%= @game3.stadium %>
+ <br>
+  <%= @game3.match %>
+  <br>
+  <%= link_to "予想する" %>
+ <br>
+ <br>
+ <br>
+  <%= @game4.stadium %>
+ <br>
+  <%= @game4.match %>
+  <br>
+  <%= link_to "予想する" %>
+ <br>
+ <br>
+ <br>
+  <%= @game5.stadium %>
+<br>
+  <%= @game5.match %>
+  <br>
+  <%= link_to "予想する" %>
+ <br>
+  <%= @game6.stadium %>
+
+  <%= @game6.match %>
+
+  <%= link_to "予想する" %>
+<% end %>
+</font>
+</div>

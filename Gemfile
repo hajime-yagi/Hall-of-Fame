@@ -34,15 +34,14 @@ gem 'sorcery'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem "sass-rails", "~>5.0"
-gem "bootstrap-sass", ">= 3.4.1"
-gem "jquery-rails"
-gem "jquery-ui-rails"
+gem 'bootstrap-sass', '>= 3.4.1'
 gem 'carrierwave'
-gem 'mini_magick'
-gem 'toastr-rails'
-gem 'rails-i18n'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'mechanize'
+gem 'mini_magick'
+gem 'rails-i18n'
+gem 'toastr-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -54,6 +53,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-rails'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 group :development do
