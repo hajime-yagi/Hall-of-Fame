@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_04_14_010724) do
     t.string "stadium"
     t.string "pitcher_a"
     t.string "pitcher_b"
+    t.string "status"
     t.integer "result_home"
     t.integer "result_away"
     t.datetime "created_at", null: false

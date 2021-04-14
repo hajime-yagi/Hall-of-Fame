@@ -9,6 +9,7 @@ class CreateGames < ActiveRecord::Migration[5.2]
       t.string :stadium
       t.string :pitcher_a
       t.string :pitcher_b
+      t.string :status
       t.integer :result_home
       t.integer :result_away
 

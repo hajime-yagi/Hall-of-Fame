@@ -85,8 +85,25 @@ class GamesController < ApplicationController
     end
    
     
-    
+    @status1 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[1]/a/div[2]/div/p[2]").inner_text
+    @status2 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[2]/a/div[2]/div/p[2]").inner_text
+    @status3 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[3]/a/div[2]/div/p[2]").inner_text
+    @status4 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[2]/div/p[2]").inner_text
+    @status5 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[2]/div/p[2]").inner_text
+    @status6 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/div/p[2]").inner_text
 
+    @pitcher1 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[1]/a/div[2]/ul[1]/li")
+    @pitcher2 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[1]/a/div[2]/ul[2]/li")
+    @pitcher3 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[2]/a/div[2]/ul[1]/li")
+    @pitcher4 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[2]/a/div[2]/ul[2]/li")
+    @pitcher5 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[3]/a/div[2]/ul[1]/li")
+    @pitcher6 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[3]/a/div[2]/ul[2]/li")
+    @pitcher7 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[2]/ul[1]/li")
+    @pitcher8 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[2]/ul[2]/li")
+    @pitcher9 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[2]/ul[1]/li")
+    @pitcher10 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[2]/ul[2]/li")
+    @pitcher11 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/ul[1]/li")
+    @pitcher12 = page.at("/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/ul[2]/li")
 
 
 
@@ -99,6 +116,9 @@ class GamesController < ApplicationController
     @games.match_time = @time1
     @games.result_home = @score1
     @games.result_away = @score2
+    @games.status = @status1
+    @games.pitcher_a = @pitcher1
+    @games.pitcher_b = @pitcher2
     @games.save
 
     @games = Game.new     
@@ -108,6 +128,9 @@ class GamesController < ApplicationController
     @games.match_time = @time2
     @games.result_home = @score3
     @games.result_away = @score4
+    @games.status = @status2
+    @games.pitcher_a = @pitcher3
+    @games.pitcher_b = @pitcher4
     @games.save
 
     @games = Game.new     
@@ -117,6 +140,9 @@ class GamesController < ApplicationController
     @games.match_time = @time3
     @games.result_home = @score5
     @games.result_away = @score6
+    @games.status = @status3
+    @games.pitcher_a = @pitcher5
+    @games.pitcher_b = @pitcher6
     @games.save
 
     @games = Game.new     
@@ -126,6 +152,9 @@ class GamesController < ApplicationController
     @games.match_time = @time4
     @games.result_home = @score7
     @games.result_away = @score8
+    @games.status = @status4
+    @games.pitcher_a = @pitcher7
+    @games.pitcher_b = @pitcher8
     @games.save
 
     @games = Game.new     
@@ -135,6 +164,9 @@ class GamesController < ApplicationController
     @games.match_time = @time5
     @games.result_home = @score9
     @games.result_away = @score10
+    @games.status = @status5
+    @games.pitcher_a = @pitcher9
+    @games.pitcher_b = @pitcher10
     @games.save
 
     @games = Game.new     
@@ -144,6 +176,9 @@ class GamesController < ApplicationController
     @games.match_time = @time6
     @games.result_home = @score11
     @games.result_away = @score12
+    @games.status = @status6
+    @games.pitcher_a = @pitcher11
+    @games.pitcher_b = @pitcher12
     @games.save
     
     @game =Game.last

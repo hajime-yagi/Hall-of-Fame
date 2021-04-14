@@ -3,6 +3,7 @@
     
     <thead>
     <tr>
+    <th scope="col">ステータス</th>
     <th scope="col">対戦</th>
     <% if !@game.match_time.nil? %>
     <th scope="col">試合開始時間</th>
@@ -16,7 +17,9 @@
     <tr>
      
        <% @games.each do |g| %>
-        <td><%= g.team_a %>VS.<%= g.team_b %></td>
+        <td><%= g.status %></td>
+        <td><%= g.team_a %>VS.<%= g.team_b %>
+         <%= g.pitcher_a %><%= g.pitcher_b %></td>
       <% if !g.match_time.nil? %>
         <td><%= g.match_time %></td>
       <% else %> 
