@@ -3,9 +3,12 @@
 class CreateGames < ActiveRecord::Migration[5.2]
   def change
     create_table :games do |t|
-      t.string :match
+      t.string :team_a
+      t.string :team_b
       t.string :match_time
       t.string :stadium
+      t.string :pitcher_a
+      t.string :pitcher_b
       t.integer :result_home
       t.integer :result_away
 

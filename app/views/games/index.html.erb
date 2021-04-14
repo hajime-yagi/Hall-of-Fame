@@ -1,57 +1,26 @@
 <font color="yellow">
-<div class="text-center">
-<br>
- <br>
- <% if @game1.nil? %>
- <%= Date.today %>
- 試合はありません 
- <% else %>
- <%= Date.today %>
- <br>
- <br>
-  <%= @game1.stadium %>
-  <br>
-  <%= @game1.match %>
-  <br>
-  <%= link_to '予想する'%>
- <br>
- <br>
- <br>
-  <%= @game2.stadium %>
-  <br>
-  <%= @game2.match %>
-  <br>
-  <%= link_to "予想する" %>
- <br>
- <br>
- <br>
-  <%= @game3.stadium %>
- <br>
-  <%= @game3.match %>
-  <br>
-  <%= link_to "予想する" %>
- <br>
- <br>
- <br>
-  <%= @game4.stadium %>
- <br>
-  <%= @game4.match %>
-  <br>
-  <%= link_to "予想する" %>
- <br>
- <br>
- <br>
-  <%= @game5.stadium %>
-<br>
-  <%= @game5.match %>
-  <br>
-  <%= link_to "予想する" %>
- <br>
-  <%= @game6.stadium %>
-
-  <%= @game6.match %>
-
-  <%= link_to "予想する" %>
-<% end %>
+<table class="table">
+    <div class="text-center">
+    <thead>
+    <tr>
+    <th scope="col">対戦</th>
+    <th scope="col">試合開始時間</th>
+    <th scope="col">スタジアム</th>
+  </tr>
+</thead>
+<tbody>
+    <tr>
+     
+       <% @games.each do |g| %>
+        <td><%= g.match %></td>
+        <td><%= g.match_time %></td>
+        <td><%= g.stadium %></td>
+        <td><%= link_to "予想する" %></td>
+    </tr>
+        
+       <% end %>
+       
+       </tbody>
+      </div>
+  </table>
 </font>
-</div>
