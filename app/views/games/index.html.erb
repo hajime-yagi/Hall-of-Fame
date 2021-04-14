@@ -4,9 +4,12 @@
     <thead>
     <tr>
     <th scope="col">対戦</th>
+    <% if !@game.match_time.nil? %>
     <th scope="col">試合開始時間</th>
+    <% else %>
+    <th scope="col">スコア</th>
+    <% end %>
     <th scope="col">スタジアム</th>
-    <th scope="col">予想ページ</th>
   </tr>
 </thead>
 <tbody>
@@ -14,11 +17,11 @@
      
        <% @games.each do |g| %>
         <td><%= g.team_a %>VS.<%= g.team_b %></td>
-        <% if !g.match_time.nil? %>
+      <% if !g.match_time.nil? %>
         <td><%= g.match_time %></td>
-        <% else %>
-        <td>試合中</td>
-        <% end %>
+      <% else %> 
+        <td><%= g.result_home %>-<%= g.result_away %></td>
+      <% end %>
         <td><%= g.stadium %></td>
         <td><%= link_to "予想する" %></td>
     </tr>
