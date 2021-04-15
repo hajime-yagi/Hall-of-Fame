@@ -17,9 +17,9 @@
     <tr>
      
        <% @games.each do |g| %>
-        <td><%= g.status %></td>
-        <td><%= g.team_a %>VS.<%= g.team_b %>
-         <%= g.pitcher_a %><%= g.pitcher_b %></td>
+        <td><%= g.status  %></td>
+        <td><%= g.pitcher_a %><%= g.team_a %>
+        VS.<%= g.team_b %><%= g.pitcher_b %></td>
       <% if !g.match_time.nil? %>
         <td><%= g.match_time %></td>
       <% else %> 
