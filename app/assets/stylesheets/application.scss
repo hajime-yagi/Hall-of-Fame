@@ -270,17 +270,19 @@ footer .sns .fb {
 footer .sns .tw {
 	background-color: #55acee;
 }
-body {
+
+body{
   background-color: #000003;
   background-image: url(aaa.jpg);
   background-color:rgba(12, 5, 5, 0.4);
   background-blend-mode:lighten;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 60%;
   background-attachment: fixed;
-  
 }
+
+
 header {
   display: flex;
   width: 100%;
@@ -378,5 +380,12 @@ header .headline{
   display: inline-block;
   margin: 0 50px;
 }
-
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+  padding: 30px;  /* 5px の値を変更 */
+}
 
