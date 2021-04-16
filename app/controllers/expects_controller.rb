@@ -1,7 +1,9 @@
 class ExpectsController < ApplicationController
   
   def index
+    @my_expects = current_user.expects.all
     @expects = Expect.all
+    #後ほど自分以外の予想だけを取ってくるような定義を考える
   end
 
   def new
@@ -22,6 +24,9 @@ end
 
 
 def edit
+  @expect = current_user.expects.find(params[:id])
+  @game = @expect.game
+  
 end
 
 private

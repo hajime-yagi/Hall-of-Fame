@@ -22,8 +22,19 @@
         <% if !g.status.nil? %>
         <td><%= g.status  %></td>
         <% end %>
+        <% if g.status != "試合終了" %>
         <td><%= g.pitcher_a %><%= g.team_a %>
         VS.<%= g.team_b %><%= g.pitcher_b %></td>
+        <% elsif g.result_home > g.result_away %>
+        <td><%= g.pitcher_a %><%= g.team_a %>
+        VS.<%= g.team_b %><%= g.pitcher_b %><br>(勝利)<span class="mgl-100">(敗北)</td>
+        <% elsif g.result_home < g.result_away %>
+        <td><%= g.pitcher_a %><%= g.team_a %>
+        VS.<%= g.team_b %><%= g.pitcher_b %><br>(敗北)<span class="mgl-100">(勝利)</td>
+        <% elsif g.result_home == g.result_away %>
+        <td><%= g.pitcher_a %><%= g.team_a %>
+        VS.<%= g.team_b %><%= g.pitcher_b %><br><span class="mgl-60">(ドロー)</span></td>
+        <% end %>
       <% if !g.match_time.nil? %>
         <td><%= g.match_time %></td>
       <% else %> 
@@ -32,9 +43,7 @@
         <td><%= g.stadium %></td>
         <td><%= link_to "予想する", new_game_expect_path(g) %></td>
     </tr>
-        
        <% end %>
-       
        </tbody>
       </div>
   </table>

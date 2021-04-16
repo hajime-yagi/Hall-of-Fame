@@ -1,5 +1,26 @@
 <font color="#FFCCFF">
 <h1>予想一覧</h1>
+<h2>自分の予想</h2>
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th scope="col">ユーザーネーム</th>
+      <th scope="col">試合</th>
+      <th scope="col">予想スコア</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+  <% @my_expects.each do |e| %>
+      <td><%= e.user.name %></td>
+      <td><%= e.game.team_a %>-<%= e.game.team_b %></td>
+      <td><%= e.home_score %>-<%= e.away_score %></td>
+      <td><%= link_to "編集", edit_expect_path(e) %></td>
+     </tr>
+      <% end %>
+  </tbody>
+</table>
+<h2>他の人の予想</h2>
 <table class="table table-condensed">
   <thead>
     <tr>
