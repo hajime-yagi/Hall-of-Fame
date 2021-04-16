@@ -1,0 +1,25 @@
+<div class="text" >
+<div id="sampleDiv1" class="tblcell md">
+<%= @game.team_a %><br>(<%= @game.pitcher_a %>)
+</div>
+<div id="sampleDiv2" class="tblcell md">
+VS.
+</div>
+<div id="sampleDiv3" class="tblcell md">
+<%= @game.team_b %><br>(<%= @game.pitcher_b %>)
+</div>
+
+<div  class="scores bt">
+<% if !@game.match_time.nil? %>
+<%= @game.match_time %>
+<% else %> 
+<%= @game.result_home %>-<%= @game.result_away %>
+<% end %>
+</div>
+</div>
+<%= form_with model:@expect,url:game_expects_path, local: true do |f| %>
+  <%= f.number_field :home_score, min: 0, max: 20 %>
+  <%= f.number_field :away_score, min: 0, max: 20 %>
+  <%= f.submit "予想"  %>
+<% end %>
+

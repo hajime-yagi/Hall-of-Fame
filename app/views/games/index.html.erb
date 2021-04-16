@@ -30,7 +30,7 @@
         <td><%= g.result_home %>-<%= g.result_away %></td>
       <% end %>
         <td><%= g.stadium %></td>
-        <td><%= link_to "予想する" %></td>
+        <td><%= link_to "予想する", new_game_expect_path(g) %></td>
     </tr>
         
        <% end %>
