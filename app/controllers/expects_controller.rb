@@ -1,6 +1,7 @@
 class ExpectsController < ApplicationController
   
   def index
+    @expects = Expect.all
   end
 
   def new
