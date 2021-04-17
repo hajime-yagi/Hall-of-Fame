@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :users
   resource :profile, only: %i[show edit update]
   resources :games do 
-    resources :expects,shallow: true
+    resources :expects
   end
 end

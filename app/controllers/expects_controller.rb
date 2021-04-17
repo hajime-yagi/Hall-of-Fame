@@ -1,9 +1,7 @@
 class ExpectsController < ApplicationController
   
   def index
-    @my_expects = current_user.expects.all
     @expects = Expect.all
-    #後ほど自分以外の予想だけを取ってくるような定義を考える
   end
 
   def new
@@ -26,11 +24,17 @@ end
 def edit
   @expect = current_user.expects.find(params[:id])
   @game = @expect.game
-  
+end
+
+def update
+  @expect = current_user.expects.find(params[:id])
+   if @expect.update!(expect_params)
+    redirect_to profile_path(current_user)
+   end
 end
 
 private
 def expect_params
-  params.require(:expect).permit(:home_score,:away_score,).merge(game_id: params[:game_id])
+  params.require(:expect).permit(:home_score,:away_score).merge(game_id: params[:game_id])
 end
 end
