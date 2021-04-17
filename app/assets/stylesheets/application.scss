@@ -178,7 +178,7 @@ input {
 }
 footer #button {
 	position: relative;
-	width: 10em;
+	width: 6em;
 	height: 2em;
 	margin: 0 auto;
 	padding: 0.2em;
@@ -278,7 +278,7 @@ body{
   background-blend-mode:lighten;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 50%;
   background-attachment: fixed;
 }
 
@@ -389,3 +389,33 @@ header .headline{
   padding: 30px;  /* 5px の値を変更 */
 }
 
+.text {
+  position: relative;
+  top: 150px;
+  color: #FFCCFF;
+  font-size: 40pt;
+  margin-left: 200px;
+}
+  
+ 
+  .md { vertical-align : middle; }
+  .bt { vertical-align : bottom; }
+  
+  .tblcell{
+     display    : table-cell;
+     text-align : center;
+     width      : 300px;
+     height     : 10px;
+     
+  }
+  .scores {
+    text-align : center;
+    width      : 880px;
+    height     : 10px;
+  }
+  .mgl-60{
+    margin-left : 60px;
+}
+.mgl-100{
+  margin-left : 140px;
+}

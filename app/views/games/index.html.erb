@@ -1,41 +1,32 @@
 <font color="#FFCCFF">
-<table class="table table-condensed">
-    
+<h1>試合一覧</h1>
+<table class="table table-condensed"> 
     <thead>
     <tr>
-    <% if !@game.status.nil? %>
+    
     <th scope="col">ステータス</th>
-    <% end %>
     <th scope="col">対戦</th>
-    <% if !@game.match_time.nil? %>
     <th scope="col">試合開始時間</th>
-    <% else %>
     <th scope="col">スコア</th>
-    <% end %>
     <th scope="col">スタジアム</th>
   </tr>
 </thead>
 <tbody>
+<thead>
     <tr>
-     
+    
        <% @games.each do |g| %>
-        <% if !g.status.nil? %>
         <td><%= g.status  %></td>
-        <% end %>
-        <td>(<%= g.pitcher_a %>)<%= g.team_a %>
-        VS.<%= g.team_b %>(<%= g.pitcher_b %>)</td>
-      <% if !g.match_time.nil? %>
+        <td><%= g.pitcher_a %><%= g.team_a %>
+        VS.<%= g.team_b %><%= g.pitcher_b %></td>
         <td><%= g.match_time %></td>
-      <% else %> 
         <td><%= g.result_home %>-<%= g.result_away %></td>
-      <% end %>
         <td><%= g.stadium %></td>
-        <td><%= link_to "予想する" %></td>
-    </tr>
+        <td><%= link_to "予想する", new_game_expect_path(g) %></td>
         
-       <% end %>
-       
-       </tbody>
-      </div>
+      </tr>
+      <% end %>
+      </thead>
+   </tbody>
   </table>
 </font>

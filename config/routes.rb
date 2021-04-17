@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'user_sessions#destroy'
   resources :users
   resource :profile, only: %i[show edit update]
-  resources :games
+  resources :games do 
+    resources :expects
+  end
 end
