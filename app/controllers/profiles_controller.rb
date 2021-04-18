@@ -17,7 +17,7 @@ class ProfilesController < ApplicationController
 
   def show
     @my_expects = current_user.expects.all
-   end
+  end
 
   private
 

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/rank' => 'ranks#index'
   resources :users
   resource :profile, only: %i[show edit update]
-  resources :games do 
+  resources :games do
     resources :expects
   end
 end

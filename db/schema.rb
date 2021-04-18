@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,48 +12,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_16_054000) do
-
-  create_table "expects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "home_score"
-    t.integer "away_score"
-    t.string "deadline"
-    t.bigint "user_id"
-    t.bigint "game_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["game_id"], name: "index_expects_on_game_id"
-    t.index ["user_id"], name: "index_expects_on_user_id"
+ActiveRecord::Schema.define(version: 20_210_416_054_000) do
+  create_table 'expects', options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8', force: :cascade do |t|
+    t.integer 'home_score'
+    t.integer 'away_score'
+    t.string 'deadline'
+    t.bigint 'user_id'
+    t.bigint 'game_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['game_id'], name: 'index_expects_on_game_id'
+    t.index ['user_id'], name: 'index_expects_on_user_id'
   end
 
-  create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "team_a"
-    t.string "team_b"
-    t.string "match_time"
-    t.string "stadium"
-    t.string "pitcher_a"
-    t.string "pitcher_b"
-    t.string "status"
-    t.integer "result_home"
-    t.integer "result_away"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'games', options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8', force: :cascade do |t|
+    t.string 'team_a'
+    t.string 'team_b'
+    t.string 'match_time'
+    t.string 'stadium'
+    t.string 'pitcher_a'
+    t.string 'pitcher_b'
+    t.string 'status'
+    t.integer 'result_home'
+    t.integer 'result_away'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "email", null: false
-    t.string "crypted_password"
-    t.string "salt"
-    t.integer "favorite_team", default: 0, null: false
-    t.text "introduction"
-    t.string "avatar"
-    t.integer "point", default: 0, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
+  create_table 'users', options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8', force: :cascade do |t|
+    t.string 'name', null: false
+    t.string 'email', null: false
+    t.string 'crypted_password'
+    t.string 'salt'
+    t.integer 'favorite_team', default: 0, null: false
+    t.text 'introduction'
+    t.string 'avatar'
+    t.integer 'point', default: 0, null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['email'], name: 'index_users_on_email', unique: true
   end
 
-  add_foreign_key "expects", "games"
-  add_foreign_key "expects", "users"
+  add_foreign_key 'expects', 'games'
+  add_foreign_key 'expects', 'users'
 end
