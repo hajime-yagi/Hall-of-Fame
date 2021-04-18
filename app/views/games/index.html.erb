@@ -22,9 +22,11 @@
         <td><%= g.match_time %></td>
         <td><%= g.result_home %>-<%= g.result_away %></td>
         <td><%= g.stadium %></td>
-        
+        <% if !g.match_time.nil? %>
         <td><%= link_to "予想する", new_game_expect_path(g) %></td>
-  
+        <% else %>
+        <td><%= "予想できません" %></td>
+        <% end %>
       </tr>
       <% end %>
       </thead>

@@ -4,15 +4,15 @@ namespace :check_expect do
   expects = Expect.expected
   expects.each do |e| 
   if  e.home_score == e.game.result_home && e.away_score == e.game.result_away
-      e.user.point += 100
+      e.user.point += 50
       e.user.save
   
   elsif e.home_score == e.game.result_home || e.away_score == e.game.result_away
-        e.user.point + 35
+        e.user.point += 20
         e.save
   
   elsif e.home_score > e.away_score && e.game.result_home > e.game.result_away
-      e.user.point + 20
+      e.user.point += 10
       e.save
   elsif e.home_score < e.away_score && e.game.result_home < e.game.result_away
       e.user.point + 20

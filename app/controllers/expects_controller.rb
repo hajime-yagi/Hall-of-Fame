@@ -1,4 +1,5 @@
 class ExpectsController < ApplicationController
+  before_action :require_login
   
   def index
     @expects = Expect.all
