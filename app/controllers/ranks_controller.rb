@@ -1,5 +1,5 @@
 class RanksController < ApplicationController
   def index
-    @rank = User.all.order(id: "DESC") 
+    @rank = User.all.order(point: "DESC") 
   end
 end
