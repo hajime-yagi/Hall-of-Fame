@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 namespace :check_expect do
   desc '予想結果と試合結果を照合し、ポイントを与える'
   task check_expect_score: :environment do
