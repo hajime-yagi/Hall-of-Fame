@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2021_04_16_054000) do
   create_table "expects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "home_score"
     t.integer "away_score"
+    t.string "deadline"
     t.bigint "user_id"
     t.bigint "game_id"
     t.datetime "created_at", null: false

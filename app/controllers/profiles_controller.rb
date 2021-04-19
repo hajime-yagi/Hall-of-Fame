@@ -2,7 +2,7 @@
 
 class ProfilesController < ApplicationController
   before_action :set_user, only: %i[edit update]
-
+  before_action :require_login
   def edit; end
 
   def update
@@ -17,7 +17,7 @@ class ProfilesController < ApplicationController
 
   def show
     @my_expects = current_user.expects.all
-   end
+  end
 
   private
 
