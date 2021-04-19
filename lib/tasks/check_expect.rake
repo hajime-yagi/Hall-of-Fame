@@ -1,6 +1,7 @@
 namespace :check_expect do
   desc '予想結果と試合結果を照合し、ポイントを与える'
   task check_expect_score: :environment do
+    puts "動いてるよ〜"
     expects = Expect.expected
     expects.each do |e|
       if e.home_score == e.game.result_home && e.away_score == e.game.result_away
