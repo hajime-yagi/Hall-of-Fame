@@ -6,10 +6,12 @@
   width: 100%;
   text-align: center;
   font-size: 3rem;
-  color: rgb(201, 70, 70)
+  color: rgb(250, 245, 245)
+  
 }
 
-body{
+ 
+.bg_test {
   background-color: #000003;
   background-image: url(hibiki.JPG);
   background-color:rgba(12, 5, 5, 0.4);
@@ -18,5 +20,10 @@ body{
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
+}
+
+.bg_test {
+  text-align:  center;    /* 文字中央寄せ */
+  
 }
   
