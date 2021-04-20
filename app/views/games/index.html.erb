@@ -15,14 +15,14 @@
 <thead>
     <tr>
     
-       <% @games.each do |g| %>
+       <% @games.zip(@expects) do |g,e| %>
         <td><%= g.status  %></td>
         <td><%= g.pitcher_a %><%= g.team_a %>
         VS.<%= g.team_b %><%= g.pitcher_b %></td>
         <td><%= g.match_time %></td>
         <td><%= g.result_home %>-<%= g.result_away %></td>
         <td><%= g.stadium %></td>
-        <% if !g.match_time.nil? %>
+        <% if !g.match_time.nil?  %>
         <td><%= link_to "予想する", new_game_expect_path(g) %></td>
         <% else %>
         <td><%= "予想できません" %></td>

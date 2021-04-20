@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ExpectsController < ApplicationController
   before_action :require_login
 
@@ -17,8 +15,8 @@ class ExpectsController < ApplicationController
     if @expect.save
       redirect_to game_expects_path
     else
-      render :new
-      @expect = current_user.expects.new(expect_params)
+      redirect_to games_path
+      flash[:alert] = "予想済みです"
     end
   end
 

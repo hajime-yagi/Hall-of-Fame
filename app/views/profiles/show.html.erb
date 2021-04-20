@@ -49,12 +49,11 @@
       <td><%= e.user.name %></td>
       <td><%= e.game.team_a %>-<%= e.game.team_b %></td>
       <td><%= e.home_score %>-<%= e.away_score %></td>
-      <% if !g.match_time.nil? %>
+      <% if !e.game.match_time.nil? %>
       <td><%= link_to "編集",  edit_game_expect_path(e.game_id,id: e.id) %></td>
      <% end %>
-     <% end %>
      </tr>
-     
+     <% end %>
   </tbody>
 </table>
    </div>
