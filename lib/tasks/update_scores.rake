@@ -1,6 +1,6 @@
 namespace :update_game do
   desc '定期的に試合情報を更新する'
-  task update_game_info: :environment do
+  task update_game_scores: :environment do
     agent = Mechanize.new
     page = agent.get('https://baseball.yahoo.co.jp/npb/schedule/')
 
@@ -149,7 +149,7 @@ namespace :update_game do
     @pitcher12 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/ul[2]/li')
     @pitcher12.nil? || @pitcher12 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/ul[2]/li').inner_text
   
-    @games = Game.new
+    @games = Game.recent[0]
     @games.team_a = @team1
     @games.team_b = @team2
     @games.stadium = @stadium1
@@ -161,7 +161,7 @@ namespace :update_game do
     @games.pitcher_b = @pitcher2
     @games.save
 
-    @games = Game.new
+    @games = Game.recent[1]
     @games.team_a = @team3
     @games.team_b = @team4
     @games.stadium = @stadium2
@@ -173,7 +173,7 @@ namespace :update_game do
     @games.pitcher_b = @pitcher4
     @games.save
 
-    @games = Game.new
+    @games = Game.recent[2]
     @games.team_a = @team5
     @games.team_b = @team6
     @games.stadium = @stadium3
@@ -185,7 +185,7 @@ namespace :update_game do
     @games.pitcher_b = @pitcher6
     @games.save
 
-    @games = Game.new
+    @games = Game.recent[3]
     @games.team_a = @team7
     @games.team_b = @team8
     @games.stadium = @stadium4
@@ -197,7 +197,7 @@ namespace :update_game do
     @games.pitcher_b = @pitcher8
     @games.save
 
-    @games = Game.new
+    @games = Game.recent[4]
     @games.team_a = @team9
     @games.team_b = @team10
     @games.stadium = @stadium5
@@ -209,7 +209,7 @@ namespace :update_game do
     @games.pitcher_b = @pitcher10
     @games.save
 
-    @games = Game.new
+    @games = Game.recent[5]
     @games.team_a = @team11
     @games.team_b = @team12
     @games.stadium = @stadium6
@@ -220,6 +220,6 @@ namespace :update_game do
     @games.pitcher_a = @pitcher11
     @games.pitcher_b = @pitcher12
     @games.save
-
+  puts "今日のスコア更新したよ〜"
   end
 end

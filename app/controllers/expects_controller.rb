@@ -2,12 +2,14 @@ class ExpectsController < ApplicationController
   before_action :require_login
 
   def index
-    @expects = Expect.all
+    @expects = Expect.today.order(created_at:"DESC")
   end
 
   def new
     @expect = Expect.new
     @game = Game.find(params[:game_id])
+    @expects = Expect.where(game_id: params[:game_id])
+  
   end
 
   def create

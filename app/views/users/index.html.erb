@@ -1,23 +1,32 @@
 <% content_for(:title, 'ユーザー一覧') %>
 <h1>ユーザー一覧</h1>
-  <tbody>
+<table class="table table-condensed"> 
+    <thead>
+    <tr>
+    
+    
+    <th scope="col">ユーザーネーム</th>
+    <th scope="col">推し球団</th>
+    <th scope="col">一言</th>
+  </tr>
+</thead>
+<tbody>
+<thead>
+    <tr>
     <% @users.each do |user| %>
-      <tr>
-        <td>
         <% if user.avatar? %>
-        <%= image_tag user.avatar.url,
+        <td><%= image_tag user.avatar.url,
                       class: 'rounded-circle',
                       id: 'preview',
-                      size: '50x50' %>
+                      size: '50x50' %>  
         <% else %>
-        <%= image_tag "/assets/player.jpg", :size => '50x50' %>
+       <td> <%= image_tag "/assets/player.jpg", :size => '50x50' %>
         <% end %>
-        </td>
-        <%= link_to  user.name  ,user_path(user) %>
+        <%= link_to  user.name  ,user_path(user) %></td>
+        <td><%= user.favorite_team_i18n %></td>
+        <td><%= user.introduction %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
 

@@ -1,4 +1,4 @@
- <font color="#FFCCFF">
+ <font color="black">
   <h1>ランキング</h1>
   <table class="table table-condensed"> 
       <thead>
@@ -15,7 +15,7 @@
       <% @rank.each.with_index(1) do |r,i| %>
         <td>  第 <%= i %> 位 </td>
         <td><%= r.name %></td>
-        <td><%= r.favorite_team %></td>
+        <td><%= r.favorite_team_i18n %></td>
         <td><%= r.point %></td>
         </tr>
         <% end %>

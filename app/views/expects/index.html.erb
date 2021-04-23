@@ -1,8 +1,9 @@
-<font color="#FFCCFF">
+<font color="black">
 <h1>予想一覧</h1>
 <table class="table table-condensed">
   <thead>
     <tr>
+      <th scope="col">推し球団</th>
       <th scope="col">ユーザーネーム</th>
       <th scope="col">試合</th>
       <th scope="col">予想スコア</th>
@@ -11,12 +12,13 @@
   <tbody>
     <tr>
   <% @expects.each do |e| %>
+      <td><%= e.user.favorite_team_i18n %></td>
       <td><%= e.user.name %></td>
       <td><%= e.game.team_a %>-<%= e.game.team_b %></td>
       <td><%= e.home_score %>-<%= e.away_score %></td>
-      <td><%= e.created_at %></td>
+      <td><%= l(e.created_at, format: :long)%></td>
      </tr>
-      <% end %>
+     <% end %>
     
   </tbody>
 </table>

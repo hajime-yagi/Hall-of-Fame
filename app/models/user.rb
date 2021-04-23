@@ -12,9 +12,10 @@ class User < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
 
-  enum favorite_team: { 読売ジャイアンツ: 0, tigers: 1, 中日ドラゴンズ: 2,
-                        横浜ベイスターズ: 3, 広島東洋カープ: 4, ヤクルトスワローズ: 5,
-                        福岡ソフトバンクホークス: 6, 千葉ロッテマリーンズ: 7,
-                        埼玉西武ライオンズ: 8, オリックス・バファローズ: 9,
-                        北海道日本ハムファイターズ: 10, 東北楽天ゴールデンイーグルス: 11 }
+  enum favorite_team: { giants: 0, tigers: 1, dragons: 2,
+                       baystars: 3, carp: 4, swallows: 5,
+                        hawks: 6, marines: 7,lions: 8, 
+                        buffaloes: 9, fighters: 10, eagles: 11 }
+
+  
 end

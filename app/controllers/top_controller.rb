@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class StaticPagesController < ApplicationController
+class TopController < ApplicationController
+  layout 'top'
   skip_before_action :require_login, only: %i[top]
-  def top; end
+  def index; end
 end
