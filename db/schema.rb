@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2021_04_16_054000) do
     t.string "crypted_password"
     t.string "salt"
     t.integer "favorite_team", default: 0, null: false
+    t.integer "team_point", default: 0, null: false
     t.text "introduction"
     t.string "avatar"
     t.integer "point", default: 0, null: false
