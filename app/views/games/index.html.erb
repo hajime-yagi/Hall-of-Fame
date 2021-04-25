@@ -16,16 +16,20 @@
     <tr>
     
        <% @games.zip(@expects) do |g,e| %>
+        <% if g.nil? %>
+        <td>試合なし</td>
+        <% else %>
         <td><%= g.status  %></td>
         <td><%= g.team_a %><%= g.pitcher_a %>
         VS.<%= g.team_b %><%= g.pitcher_b %></td>
         <td><%= g.match_time %></td>
         <td><%= g.result_home %>-<%= g.result_away %></td>
         <td><%= g.stadium %></td>
-        <% if !g.match_time.nil?  %>
+        <% if !g.match_time.nil? && !g.nil?%>
         <td><%= link_to "予想する", new_game_expect_path(g) %></td>
         <% else %>
         <td><%= "予想できません" %></td>
+        <% end %>
         <% end %>
       </tr>
       <% end %>

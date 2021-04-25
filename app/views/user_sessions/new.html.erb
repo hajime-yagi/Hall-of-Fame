@@ -1,7 +1,10 @@
+<font color="black">
 <% content_for(:title, '新規登録') %>
 <div class="container">
   <div class="row">
-    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+  <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+    <div class="position" %>
+    <h2>ログイン</h2>
       <%= form_with url: login_path, local: true do |f| %>
         <div class="form-group">
           <%= f.label :email, "Eメール" %>
@@ -21,3 +24,7 @@
     </div>
   </div>
 </div>
+<div class="container">
+	<span class="ball"></span>
+	<span class="shadow"></span>
+</font>

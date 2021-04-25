@@ -150,9 +150,6 @@ namespace :update_game do
     @pitcher12.nil? || @pitcher12 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/ul[2]/li').inner_text
   
     @games = Game.recent[0]
-    @games.team_a = @team1
-    @games.team_b = @team2
-    @games.stadium = @stadium1
     @games.match_time = @time1
     @games.result_home = @score1
     @games.result_away = @score2
@@ -162,9 +159,6 @@ namespace :update_game do
     @games.save
 
     @games = Game.recent[1]
-    @games.team_a = @team3
-    @games.team_b = @team4
-    @games.stadium = @stadium2
     @games.match_time = @time2
     @games.result_home = @score3
     @games.result_away = @score4
@@ -174,8 +168,6 @@ namespace :update_game do
     @games.save
 
     @games = Game.recent[2]
-    @games.team_a = @team5
-    @games.team_b = @team6
     @games.stadium = @stadium3
     @games.match_time = @time3
     @games.result_home = @score5
@@ -186,9 +178,6 @@ namespace :update_game do
     @games.save
 
     @games = Game.recent[3]
-    @games.team_a = @team7
-    @games.team_b = @team8
-    @games.stadium = @stadium4
     @games.match_time = @time4
     @games.result_home = @score7
     @games.result_away = @score8
@@ -198,9 +187,6 @@ namespace :update_game do
     @games.save
 
     @games = Game.recent[4]
-    @games.team_a = @team9
-    @games.team_b = @team10
-    @games.stadium = @stadium5
     @games.match_time = @time5
     @games.result_home = @score9
     @games.result_away = @score10
@@ -210,9 +196,6 @@ namespace :update_game do
     @games.save
 
     @games = Game.recent[5]
-    @games.team_a = @team11
-    @games.team_b = @team12
-    @games.stadium = @stadium6
     @games.match_time = @time6
     @games.result_home = @score11
     @games.result_away = @score12
@@ -220,6 +203,6 @@ namespace :update_game do
     @games.pitcher_a = @pitcher11
     @games.pitcher_b = @pitcher12
     @games.save
-  puts "今日のスコア更新したよ〜"
   end
+  puts "今日のスコア更新したよ〜"
 end

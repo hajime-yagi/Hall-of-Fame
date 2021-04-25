@@ -174,7 +174,7 @@ input {
 	min-height: 100vh;
 	margin: auto;
 	padding: 1em 0 10em 0;
-	background: rgb(236, 240, 241);
+	background: rgb(8, 10, 10);
 }
 footer #button {
 	position: relative;
@@ -238,38 +238,6 @@ footer .copyright p {
 	letter-spacing: 1px;
 	color: #ffffff;
 }
-footer .sns {
-	float: right;
-	width: 50%;
-}
-footer .sns a {
-	font-weight: bold;
-	line-height: 2em;
-	width: 2em;
-	margin: auto 0.1em;
-	float: right;
-	-webkit-transition: all, 0.3s;
-	        transition: all, 0.3s;
-	text-align: center;
-	text-decoration: none;
-	color: #ffffff;
-	border-radius: 4px;
-	background-color: #00acc1;
-}
-footer .sns a:hover {
-	-webkit-transition: all, 0.3s;
-	        transition: all, 0.3s;
-	background-color: #222222;
-}
-footer .sns .insta {
-	background-color: #e4405f;
-}
-footer .sns .fb {
-	background-color: #3b5999;
-}
-footer .sns .tw {
-	background-color: #55acee;
-}
 
 
 
@@ -312,11 +280,7 @@ header {
 .bar{
   padding-bottom: 10px;
 }
-.nav-list {
-  text-align: left;
-  padding: 10px 0;
-  margin: 0 auto;
-}
+
 .header-menu4 {
   position: absolute;
   color: #ffffff;
@@ -513,8 +477,8 @@ body{
 }
 .cp_button09 {
 	display: inline-block;
-	width: 160px;
-	padding: 1em;
+	width: 80px;
+	padding: 0.5em;
 	line-height: 1.4;
 	cursor: pointer;
 	user-select: none;
@@ -540,4 +504,32 @@ body{
 	border: 3px solid #4caf50;
 	background-color: #4caf50;
 	box-shadow: 2px 0 0 0 #4caf50, 2px 2px 0 0 #4caf50, 0 2px 0 0 #4caf50;
+}
+.ball{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  background-image: url(ball.jpg);
+  background-size: 200px;
+  background-position: center; 
+
+  opacity:0.6;
+  animation: bound-anim 1s infinite;
+}
+
+@keyframes bound-anim {
+  0%,100% {top: 0;transform: scale(1);}
+  30% {top: -60%; transform: scale(0.96,1.04);}
+  60% {transform: scale(1);}
+  90% {top: 0;transform: scale(1.15,0.9);}
+}
+
+.position {
+  padding-left: 300px;
+  padding-top:50px;
 }

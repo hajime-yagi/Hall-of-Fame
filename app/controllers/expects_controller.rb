@@ -25,6 +25,7 @@ class ExpectsController < ApplicationController
   def edit
     @expect = current_user.expects.find(params[:id])
     @game = @expect.game
+    @expects = Expect.where(game_id: params[:game_id])
   end
 
   def update

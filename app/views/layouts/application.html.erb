@@ -9,9 +9,11 @@
   </head>
  
   <body>
-  <% if !current_page?(root_path)%>
-    <%= render 'shared/header' %>
-  <% end %>
+  <% if logged_in? %>
+  <%= render 'shared/header' %>
+<% else %>
+  <%= render 'shared/before_login_header' %>
+<% end %>
     <%= yield %>
     <% if flash.any? %>
     <script type="text/javascript">
