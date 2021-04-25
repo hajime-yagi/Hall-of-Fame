@@ -26,7 +26,7 @@
         <td><%= g.result_home %>-<%= g.result_away %></td>
         <td><%= g.stadium %></td>
         <% if !g.match_time.nil? && !g.nil?%>
-        <td><%= link_to "予想する", new_game_expect_path(g) %></td>
+        <td><%= link_to "予想する", new_game_expect_path(g) ,class: 'cp_btn1'%></td>
         <% else %>
         <td><%= "予想できません" %></td>
         <% end %>

@@ -1,8 +1,10 @@
 <body>
 <div class="hoge">
-<button class="cp_button13"><%= link_to "ログイン",login_path , style: "color:white;" %></button><br>
-<br><br>
-<button class="cp_button14"><%= link_to "新規登録", new_user_path,style: "color:white;"  %></button><br>
+<%= link_to "ログイン",login_path , style: "color:black;" , class: 'cp_btn' %>
+<br>
+<%= link_to "新規登録",login_path , style: "color:black;" , class: 'cp_btn' %>
+<br>
+<button class="cp_button14"><%= link_to "マイページへ", profile_path,style: "color:white;"  %></button><br>
 </div>
 <div class="container">
 	<span class="ball"></span>

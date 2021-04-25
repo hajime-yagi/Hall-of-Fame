@@ -30,11 +30,11 @@ every :day, at: '09:30' do
   rake "update_game:update_game_info"
 end
 
-every :day, at: '23:00' do
+every :day, at: '22:50' do
   rake "update_game:update_game_scores"
 end
 
-every :day, at: '23:30' do
+every :day, at: '23:00' do
   rake "check_expect:check_expect_score"
 end
 

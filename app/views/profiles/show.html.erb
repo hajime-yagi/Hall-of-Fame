@@ -16,6 +16,8 @@
          <th scope="row"><%= "推し球団" %></th>
          <td><%= current_user.favorite_team_i18n %></td>
          </tr>
+         <th scope="row"><%= "所持ポイント" %></th>
+         <td><%= current_user.point %></td>
          <tr>
           <th scope="row">アバター</th>
           <% if current_user.avatar.present? %>
@@ -31,7 +33,7 @@
          <td><%=  current_user.introduction %></td>
          </tr>
        </table>
-       <%= link_to "編集", edit_profile_path, class: 'cp_button09 float-right' %>
+       <%= link_to "編集", edit_profile_path, class: 'cp_button09 ' %>
      
 
 <h1 class="float-left mb-5"><%= "予想履歴" %></h1>
@@ -54,7 +56,7 @@
       <td><%= e.home_score %>-<%= e.away_score %></td>
       <td><%= e.game.result_home %>-<%= e.game.result_away %></td>
       <% if !e.game.match_time.nil? || e.game.created_at.today? %>
-      <td><%= link_to "編集",  edit_game_expect_path(e.game_id,id: e.id) %></td>
+      <td><%= link_to "編集",  edit_game_expect_path(e.game_id,id: e.id),class: 'cp_button09' %></td>
      <% end %>
      </tr>
      <% end %>

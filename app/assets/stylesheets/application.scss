@@ -483,16 +483,16 @@ body{
 	cursor: pointer;
 	user-select: none;
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
-	color: #4caf50;
+	color: #229b26;
 	border: 3px solid #4caf50;
 	border-radius: 0.5em;
 	background: transparent;
 	box-shadow: 3px 0 0 0 #4caf50, 3px 3px 0 0 #4caf50, 0 3px 0 0 #4caf50;
-  background: #54c06a;
+  background: #2e9443;
 }
 .cp_button09:hover {
 	transform: translate(-2px, -2px);
-	box-shadow: 5px 0 0 0 #4caf50, 5px 5px 0 0 #4caf50, 0 5px 0 0 #4caf50;
+	box-shadow: 5px 0 0 0 #53c757, 5px 5px 0 0 #4caf50, 0 5px 0 0 #4caf50;
 	border: 3px solid #4caf50;
 	color: #4caf50;
 }
@@ -532,4 +532,128 @@ body{
 .position {
   padding-left: 300px;
   padding-top:50px;
+}
+
+.cp_button13 {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 120px;
+  padding: 0.5em;
+  line-height: 1.4;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s;
+  
+  border: 0;
+  background: #dd5656;
+}
+.cp_button13:before {
+  position: absolute;
+  z-index: -1;
+  top: 100%;
+  left: 5%;
+  width: 10%;
+  height: 10px;
+  content: '';
+  transition:transform 0.3s,opacity 0.3s;
+  pointer-events: none;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(46,125,50, 0.35) 0%, rgba(46,125,50, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(46,125,50, 0.35) 0%, rgba(46,125,50, 0) 80%);
+}
+.cp_button13:hover {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  -webkit-animation: button13 1.5s linear infinite alternate 0.3s;
+          animation: button13 1.5s linear infinite alternate 0.3s;
+  color: #cbf72f;
+}
+.cp_button13:hover:before {
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  -webkit-animation: button13_shadow 1.5s linear infinite alternate 0.3s;
+          animation: button13_shadow 1.5s linear infinite alternate 0.3s;
+  opacity: 0.4;
+}
+.cp_button13:focus {
+  color: #f50b0b;
+}
+@-webkit-keyframes button13 {
+  50% {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+  100% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+}
+@keyframes button13 {
+  50% {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+  100% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+}
+@-webkit-keyframes button13_shadow {
+  0% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    opacity: 0.4;
+  }
+  50% {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    opacity: 0.4;
+  }
+}
+@keyframes button13_shadow {
+  0% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    opacity: 0.4;
+  }
+  50% {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    opacity: 0.4;
+  }
+}
+a.cp_btn1 {
+	position: relative;
+	display: block;
+	width: 160px;
+	padding: 0.3em;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	color: #ec347a;
+}
+a.cp_btn1:before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 4px;
+	top:100%;
+	left: 0;
+	border-radius: 3px;
+	background:#e02c4a;
+	transition: .4s;
+}
+a.cp_btn1:hover:before {
+	top: calc(100% - 3px);
 }
