@@ -1,30 +1,31 @@
-# frozen_string_literal: true
-
 class ExpectsController < ApplicationController
   before_action :require_login
 
   def index
-    @expects = Expect.all
+    @expects = Expect.today.order(created_at:"DESC")
   end
 
   def new
     @expect = Expect.new
     @game = Game.find(params[:game_id])
+    @expects = Expect.where(game_id: params[:game_id])
+  
   end
 
   def create
     @expect = current_user.expects.new(expect_params)
     if @expect.save
-      redirect_to game_expects_path
+      redirect_to profile_path
     else
-      render :new
-      @expect = current_user.expects.new(expect_params)
+      redirect_to games_path
+      flash[:alert] = "予想済みです"
     end
   end
 
   def edit
     @expect = current_user.expects.find(params[:id])
     @game = @expect.game
+    @expects = Expect.where(game_id: params[:game_id])
   end
 
   def update

@@ -1,13 +1,174 @@
-.top-inner-text {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-  font-size: 3rem;
-  color: rgb(201, 70, 70)
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+
+body{
+  background-color: #000003;
+  background-image: url(top.jpg);
+  background-blend-mode:lighten;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  
+  
+  .bound-container{
+    position:relative;
+    width:100%;
+    height:350px;
+  }
+  
+  
+
+  .ball{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    background-image: url(ball.jpg);
+    background-size: 200px;
+    background-position: center; 
+  
+    opacity:0.6;
+    animation: bound-anim 1s infinite;
+  }
+  
+  @keyframes bound-anim {
+    0%,100% {top: 0;transform: scale(1);}
+    30% {top: -60%; transform: scale(0.96,1.04);}
+    60% {transform: scale(1);}
+    90% {top: 0;transform: scale(1.15,0.9);}
+  }
+}
+.hoge {
+  margin-left: 1000px;
+  margin-top: 100px;
+
+}
+body {
+  font-family: monospace;
 }
 
-
+.cp_button14 {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 160px;
+  padding: 1em;
+  line-height: 1.4;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s;
   
+  border: 0;
+  background: #7e7ed1;
+}
+.cp_button14:before {
+  position: absolute;
+  z-index: -1;
+  top: 100%;
+  left: 5%;
+  width: 10%;
+  height: 10px;
+  content: '';
+  transition:transform 0.3s,opacity 0.3s;
+  pointer-events: none;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(46,125,50, 0.35) 0%, rgba(46,125,50, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(46,125,50, 0.35) 0%, rgba(46,125,50, 0) 80%);
+}
+.cp_button14:hover {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  -webkit-animation: button13 1.5s linear infinite alternate 0.3s;
+          animation: button13 1.5s linear infinite alternate 0.3s;
+  color: #2e7d32;
+}
+.cp_button14:hover:before {
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  -webkit-animation: button13_shadow 1.5s linear infinite alternate 0.3s;
+          animation: button13_shadow 1.5s linear infinite alternate 0.3s;
+  opacity: 0.4;
+}
+.cp_button14:focus {
+  color: #2e7d32;
+}
+@-webkit-keyframes button14 {
+  50% {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+  100% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+}
+@keyframes button14 {
+  50% {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+  100% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+}
+@-webkit-keyframes button14_shadow {
+  0% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    opacity: 0.4;
+  }
+  50% {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    opacity: 0.4;
+  }
+}
+@keyframes button14_shadow {
+  0% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    opacity: 0.4;
+  }
+  50% {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    opacity: 0.4;
+  }
+}
+
+a.cp_btn {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #FF5722;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	border: double 4px #FF5722;
+	border-radius: 50%;
+	overflow: hidden;
+	transition: .6s;
+}
+a.cp_btn:hover {
+	transform: rotateY(360deg);
+}

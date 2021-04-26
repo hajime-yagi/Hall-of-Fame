@@ -8,3 +8,19 @@ ja:
         password:  パスワード
         name: 名前
         password_confirmation: パスワード確認
+  enums:
+     user:
+       favorite_team:
+         giants:  '読売ジャイアンツ'
+         tigers:  阪神タイガース
+         dragons: '中日ドラゴンズ'
+         baystars: 'DeNAベイスターズ'
+         carp: '広島カープ'
+         swallows: 'ヤクルトスワローズ'
+         hawks:  'ソフトバンクホークス'
+         marines: '千葉ロッテマリーンズ'
+         lions:  '西武ライオンズ'
+         orix: 'オリックスバッファローズ'
+         fighters: '日本ハムファイターズ'
+         eagles:  '楽天ゴールデンイーグルス'
+ 

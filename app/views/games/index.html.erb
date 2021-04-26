@@ -1,5 +1,7 @@
-<font color="#FFCCFF">
+<font color="black">
+<div class="text-center" >
 <h1>試合一覧</h1>
+</div>
 <table class="table table-condensed"> 
     <thead>
     <tr>
@@ -15,17 +17,21 @@
 <thead>
     <tr>
     
-       <% @games.each do |g| %>
+       <% @games.zip(@expects) do |g,e| %>
+        <% if g.team_a.nil? %>
+        <td>試合はありません</td>
+        <% else %>
         <td><%= g.status  %></td>
-        <td><%= g.pitcher_a %><%= g.team_a %>
+        <td><%= g.team_a %><%= g.pitcher_a %>
         VS.<%= g.team_b %><%= g.pitcher_b %></td>
         <td><%= g.match_time %></td>
         <td><%= g.result_home %>-<%= g.result_away %></td>
         <td><%= g.stadium %></td>
-        <% if !g.match_time.nil? %>
-        <td><%= link_to "予想する", new_game_expect_path(g) %></td>
+        <% if !g.match_time.nil? && !g.nil?%>
+        <td><%= link_to "予想する", new_game_expect_path(g) ,class: 'cp_btn1'%></td>
         <% else %>
         <td><%= "予想できません" %></td>
+        <% end %>
         <% end %>
       </tr>
       <% end %>

@@ -1,8 +1,8 @@
 <% content_for(:title, 'マイページ') %>
 <div class="container pt-3">
-   <div class="row">
-     <div class="col-md-10 offset-md-1">
-       <h1 class="float-left mb-5"><%= "マイページ" %></h1>
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <h1 class="float-left mb-5"><%= "マイページ" %></h1>
        <table class="table">
          <tr>
          <th scope="row"><%= "ユーザーネーム" %></th>
@@ -13,9 +13,11 @@
          <td><%= current_user.email %></td>
          </tr>
          <tr>
-         <th scope="row"><%= "推し球団" %></th>
-         <td><%= current_user.favorite_team %></td>
+         <th scope="row"><%= "球団" %></th>
+         <td><%= current_user.favorite_team_i18n %></td>
          </tr>
+         <th scope="row"><%= "所持ポイント" %></th>
+         <td><%= current_user.point %></td>
          <tr>
           <th scope="row">アバター</th>
           <% if current_user.avatar.present? %>
@@ -31,32 +33,37 @@
          <td><%=  current_user.introduction %></td>
          </tr>
        </table>
-       <%= link_to "編集", edit_profile_path, class: 'btn btn-success float-right' %>
-       
+       <%= link_to "編集", edit_profile_path, class: 'cp_button09 ' %>
      
- <h1 class="float-left mb-5"><%= "予想履歴" %></h1>
+
+<h1 class="float-left mb-5"><%= "予想履歴" %></h1>
 <table class="table table-condensed">
   <thead>
     <tr>
+      <th scope="col">予想日時</th>
       <th scope="col">ユーザーネーム</th>
       <th scope="col">試合</th>
       <th scope="col">予想スコア</th>
+      <th scope="col">結果スコア</th>
     </tr>
   </thead>
   <tbody>
     <tr>
   <% @my_expects.each do |e| %>
+      <td><%=  l(e.created_at, format: :long) %></td>
       <td><%= e.user.name %></td>
       <td><%= e.game.team_a %>-<%= e.game.team_b %></td>
       <td><%= e.home_score %>-<%= e.away_score %></td>
-      <% if !g.match_time.nil? %>
-      <td><%= link_to "編集",  edit_game_expect_path(e.game_id,id: e.id) %></td>
-     <% end %>
+      <td><%= e.game.result_home %>-<%= e.game.result_away %></td>
+      <% if !e.game.match_time.nil? || e.game.created_at.today? %>
+      <td><%= link_to "編集",  edit_game_expect_path(e.game_id,id: e.id),class: 'cp_button09' %></td>
      <% end %>
      </tr>
-     
+     <% end %>
   </tbody>
 </table>
    </div>
+   </div>
+ </div>
  </div>
  

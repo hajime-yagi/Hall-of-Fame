@@ -11,9 +11,9 @@
          <%= f.label :email, "Eメール" %>
          <%= f.email_field :email, class: 'form-control mb-3' %>
          <br>
-         <%= f.label :favorite_team, "推し球団" %>
+         <%= f.label :favorite_team, "球団" %>
         <br>
-         <%= f.select :favorite_team, User.favorite_teams.keys.to_a%>
+         <%= f.select :favorite_team, User.favorite_teams.keys.map {|k| [I18n.t("enums.user.favorite_team.#{k}"), k]}, {}, { class: 'form-control'}%>
         <br>
         <br>
          
