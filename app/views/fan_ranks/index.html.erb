@@ -1,10 +1,12 @@
- <font color="black">
+<font color="black">
  <div class="team-rank">
   <%= link_to '球団別ポイント表',team_rank_path,class: "cp_button13" %>
   </div>
-  <%= link_to '所属球団内ランキング',fan_rank_path,class: "cp_button13" %>
+  <%= link_to '個人ランキング',rank_path ,class: "cp_button13"%>
   <div class="rank" >
-  <h1>ランキング</h1>
+  
+  <h1><%= current_user.favorite_team_i18n %>ファンランキング</h1>
+
   </div>
   <table class="table table-condensed"> 
       <thead>
@@ -18,7 +20,7 @@
   <tbody>
   <thead>
       <tr>
-      <% @rank.each.with_index(1) do |r,i| %>
+      <% @user.each.with_index(1) do |r,i| %>
         <td>  第 <%= i %> 位 </td>
         <td><%= r.name %></td>
         <td><%= r.favorite_team_i18n %></td>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post '/login' => 'user_sessions#create'
   delete '/logout' => 'user_sessions#destroy'
   get '/rank' => 'ranks#index'
+  get '/fan_rank' => 'fan_ranks#index'
   get '/team_rank' => 'team_ranks#index'
   resources :users
   resource :profile, only: %i[show edit update]
