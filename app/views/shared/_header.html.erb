@@ -10,9 +10,7 @@
 	<div class="header-menu2">
   <%= link_to 'ユーザー一覧',users_path %>
 	</div>
-	<div class="header-menu3">
-  <%= link_to '球団別ファンランキング' ,team_rank_path %>
-	</div>
+	
 <div class="cp_fullscreenmenu">
 <input type="checkbox" id="menuToggle" />
 
@@ -24,9 +22,9 @@
 <label for="menuToggle"></label>
 <div class="menucont">
 	<ul>
-		<li><%= link_to '試合一覧' ,games_path %></li>
-		<li><%= link_to 'ユーザー一覧',users_path %></li>
-		<li><%= link_to 'マイページ',profile_path(@user) %></li>
+		<li><%= link_to 'みんなの予想',expects_path %></li>
+		<li><%= link_to 'ランキング' ,rank_path %></li>
+		<li><%= link_to 'マイページ',profile_path %></li>
 		<li><%= link_to 'ログアウト', logout_path,  method: :delete %></li>
 	</ul>
 </div>

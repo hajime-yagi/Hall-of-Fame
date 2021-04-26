@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users
   resource :profile, only: %i[show edit update]
   resources :games do
-    resources :expects
+    resources :expects, only: %i[new create show edit update]
   end
+  resources :expects, only: %i[ index ]
 end

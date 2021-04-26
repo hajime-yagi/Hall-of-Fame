@@ -1,5 +1,7 @@
 <font color="black">
+<div class="text-center" >
 <h1>試合一覧</h1>
+</div>
 <table class="table table-condensed"> 
     <thead>
     <tr>
@@ -16,8 +18,8 @@
     <tr>
     
        <% @games.zip(@expects) do |g,e| %>
-        <% if g.nil? %>
-        <td>試合なし</td>
+        <% if g.team_a.nil? %>
+        <td>試合はありません</td>
         <% else %>
         <td><%= g.status  %></td>
         <td><%= g.team_a %><%= g.pitcher_a %>
