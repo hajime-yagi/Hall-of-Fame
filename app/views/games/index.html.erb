@@ -1,6 +1,9 @@
 <font color="black">
-<div class="text-center" >
+<div class="ichiran1" >
 <h1>試合一覧</h1>
+</div>
+<div class="date">
+<h2><%= Date.today %></h2>
 </div>
 <table class="table table-condensed"> 
     <thead>
@@ -11,6 +14,7 @@
     <th scope="col">試合開始時間</th>
     <th scope="col">スコア</th>
     <th scope="col">スタジアム</th>
+    <th scope="col"></th>
   </tr>
 </thead>
 <tbody>
@@ -18,20 +22,16 @@
     <tr>
     
        <% @games.zip(@expects) do |g,e| %>
-        <% if g.team_a.nil? %>
-        <td>試合はありません</td>
-        <% else %>
         <td><%= g.status  %></td>
-        <td><%= g.team_a %><%= g.pitcher_a %>
-        VS.<%= g.team_b %><%= g.pitcher_b %></td>
+        <td><%= g.team_a %>
+        VS.<%= g.team_b %></td>
         <td><%= g.match_time %></td>
         <td><%= g.result_home %>-<%= g.result_away %></td>
         <td><%= g.stadium %></td>
         <% if !g.match_time.nil? && !g.nil?%>
-        <td><%= link_to "予想する", new_game_expect_path(g) ,class: 'cp_btn1'%></td>
+        <td><%= link_to "予想する", new_game_expect_path(g) ,class: 'cp_button13'%></td>
         <% else %>
         <td><%= "予想できません" %></td>
-        <% end %>
         <% end %>
       </tr>
       <% end %>

@@ -44,6 +44,7 @@ gem 'rails-i18n'
 gem 'toastr-rails'
 gem 'whenever', require: false
 gem 'enum_help'
+gem 'ransack'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

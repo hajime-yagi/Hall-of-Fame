@@ -15,7 +15,8 @@ class ExpectsController < ApplicationController
   def create
     @expect = current_user.expects.new(expect_params)
     if @expect.save
-      redirect_to profile_path
+      redirect_to games_path
+      flash[:success] = "予想しました"
     else
       redirect_to games_path
       flash[:alert] = "予想済みです"
