@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :expects, only: %i[new create show edit update]
   end
   resources :expects, only: %i[ index ]
-  
- 
+  get 'contact' => 'contacts#index'    
+  post 'contact/thanks' => 'contacts#thanks'    
+
 end
