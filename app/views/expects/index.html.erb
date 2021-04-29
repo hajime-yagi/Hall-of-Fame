@@ -2,6 +2,7 @@
 <div class="rank" >
 <h1>予想一覧</h1>
 </div>
+<%= render 'search' %>
 <table class="table table-condensed">
   <thead>
     <tr>
@@ -25,4 +26,5 @@
     
   </tbody>
 </table>
+<%= paginate @expects %>
 </font>

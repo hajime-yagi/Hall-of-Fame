@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @my_expects = current_user.expects.all.order(created_at:"DESC")
+    @my_expects = current_user.expects.all.order(created_at:"DESC").page(params[:page])
   end
 
   private

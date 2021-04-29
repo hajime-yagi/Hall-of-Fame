@@ -1,0 +1,9 @@
+<%= search_form_for(@q) do |f| %>
+  <div class='input-group mb-3'>
+  <%= f.select :game_team_a_eq , options_from_collection_for_select(Game.today,:team_a,:team_a ),include_blank: 'チーム'%>
+  -<%= f.select :game_team_b_eq , options_from_collection_for_select(Game.today,:team_b,:team_b ) ,include_blank: 'チーム'%>
+    <div class='input-group-append'>
+    <%= f.submit value: "検索", class: 'btn btn-primary' %>
+    </div>
+  </div>
+  <% end %>

@@ -24,4 +24,22 @@ $(window).scroll(function() {
     $('header').removeClass('shrink');
   }
 });
+//Unique Footer for Portfolio
+//Best for Webkit Browser Only
+//To be updated again, soon...
 
+
+$(function(){
+
+  $('a.show-content').click(function(){
+    $(this).find('span').animate({
+      height:'+=80px'
+    },300)
+  }).click(function(){
+    $(this).find('span').animate({
+      height:'-=80px'
+    },200)
+  });
+  
+//end js
+});

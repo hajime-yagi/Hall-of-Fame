@@ -1,8 +1,9 @@
 class ExpectsController < ApplicationController
   before_action :require_login
-
+  
   def index
-    @expects = Expect.today.order(created_at:"DESC")
+    @q = Expect.ransack(params[:q])
+    @expects = @q.result(distinct: true).order(created_at: 'DESC').page(params[:page])
   end
 
   def new
@@ -34,7 +35,7 @@ class ExpectsController < ApplicationController
     redirect_to profile_path(current_user) if @expect.update!(expect_params)
   end
 
-  private
+  
 
   def expect_params
     params.require(:expect).permit(:home_score, :away_score).merge(game_id: params[:game_id])

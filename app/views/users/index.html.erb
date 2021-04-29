@@ -2,11 +2,10 @@
 <div class="ichiran" >
 <h1>ユーザー一覧</h1>
 </div>
+<%= render 'search' %>
 <table class="table table-condensed"> 
     <thead>
     <tr>
-    
-    
     <th scope="col">ユーザーネーム</th>
     <th scope="col">球団</th>
     <th scope="col">一言</th>
@@ -30,5 +29,8 @@
       </tr>
     <% end %>
   </tbody>
+  <div class="pagenate">
+  <%= paginate @users %>
 </table>
-
+<%= paginate @users %>
+</div>

@@ -1,12 +1,28 @@
-<footer>
-	<div id="button"></div>
-	<div id="container">
-	<div id="cont">
-		<div class="copyright">
-			<p>© 2021 - Organisation</p>
-			<p>プライバシーポリシー</p>
-		</div>
-		</div>
-	</div>
-	</div>
-</footer>
+<div id="footer">
+  <ul>
+    <li><%= link_to 'Home' ,root_path %></li>
+    <li><%= link_to 'プライバシーポリシー' %></li>
+    <li><a class="show-content" href="#">遊び方
+      <span>
+        <!-- Dummy Content //-->
+        <img class="profix" src="http://placehold.it/512x512/fff/000/?text=Photo" />
+      <h1>遊び方</h1>
+<p>このアプリは</p>
+
+<p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+      </span></a>
+    </li>
+    <li><a class="show-content" href="#">Contact
+      <span class="single-col">
+        <h1>Quick Contact</h1>
+        <form id="contactform">
+          <input type="text" placeholder="Your name" />
+          <input type="text" placeholder="touken1996@yahoo.co.jp" />
+          <input type="text" placeholder="Subject" />
+          <textarea rows="5" placeholder="Your message...."></textarea>
+          <input type="submit" value="Send Message" style="background:#fb0;" />
+        </form>
+      </span>
+      </a></li>
+  </ul>
+</div>

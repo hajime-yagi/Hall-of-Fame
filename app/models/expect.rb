@@ -8,5 +8,4 @@ class Expect < ApplicationRecord
   
   scope :expected, -> { where('created_at >= ?', Time.zone.now.beginning_of_day) }
 
-  
 end
