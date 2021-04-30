@@ -13,8 +13,9 @@ body{
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
 }
+
   
 
 
@@ -53,8 +54,8 @@ body{
   }
 
 .hoge {
-  margin-left: 1000px;
-  margin-top: 150px;
+  margin-left: 380px;
+  margin-top: 10px;
 
 }
 body {
@@ -73,7 +74,7 @@ body {
   transition: transform 0.3s;
   
   border: 0;
-  background: #f532a4;
+  background: #1717da;
 }
 .cp_button14:before {
   position: absolute;
@@ -165,11 +166,11 @@ a.cp_btn {
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	color: #FF5722;
-	width: 100px;
-	height: 100px;
-	line-height: 100px;
-	border: double 4px #FF5722;
+	color: #e72e6c;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	border: double 4px #ff2290;
 	border-radius: 50%;
 	overflow: hidden;
 	transition: .6s;
@@ -177,8 +178,3 @@ a.cp_btn {
 a.cp_btn:hover {
 	transform: rotateY(360deg);
 }
-
-
-
-
-

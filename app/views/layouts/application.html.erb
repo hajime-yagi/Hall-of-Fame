@@ -2,12 +2,16 @@
 <html>
   <head>
   <title><%= page_title(yield(:title)) %></title>
+  <%= favicon_link_tag('favicon') %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag  'phone', media: '(min-width: 320px) and (max-width: 639px)', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="phone.scss" rel="stylesheet" type="text/scss" media="(min-width: 320px) and (max-width: 639px)" >
+   
   </head>
  
   <body>
@@ -32,4 +36,5 @@
     <%= render 'shared/footer' %>
  
   </body>
+  
 </html>

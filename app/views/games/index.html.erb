@@ -1,26 +1,23 @@
-<font color="black">
 <div class="ichiran1" >
 <h1>試合一覧</h1>
 </div>
 <div class="date">
 <h2><%= Date.today %></h2>
 </div>
-<table class="table table-condensed"> 
+<div class="margin">
+<table   height="700">
     <thead>
     <tr>
-    
     <th scope="col">ステータス</th>
     <th scope="col">対戦</th>
-    <th scope="col">試合開始時間</th>
+    <th scope="col">開始時間</th>
     <th scope="col">スコア</th>
     <th scope="col">スタジアム</th>
     <th scope="col"></th>
   </tr>
 </thead>
 <tbody>
-<thead>
     <tr>
-    
        <% @games.zip(@expects) do |g,e| %>
         <td><%= g.status  %></td>
         <td><%= g.team_a %>
@@ -38,4 +35,5 @@
       </thead>
    </tbody>
   </table>
-</font>
+  </div>
+  

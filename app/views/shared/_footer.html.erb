@@ -2,26 +2,7 @@
   <ul>
     <li><%= link_to 'Home' ,root_path %></li>
     <li><%= link_to '利用規約',page_path('terms') %></li>
-    <li><a class="show-content" href="#">遊び方
-      <span>
-        <!-- Dummy Content //-->
-        <img class="profix" src="http://placehold.it/512x512/fff/000/?text=Photo" />
-      <h1>遊び方</h1>
-<p>このアプリは</p>
-
-<p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-      </span></a>
-    </li>
-    <li><%= link_to 'お問い合わせ',contact_path %>
-      <span class="single-col">
-        <h1>Contact</h1>
-        <form id="contactform">
-          <input type="text" placeholder="Your name" />
-          <input type="text" placeholder="example@example.com" />
-          <input type="text" placeholder="Subject" />
-          <textarea rows="5" placeholder="Your message...."></textarea>
-        </form>
-      </span>
-      </li>
+    <li><%= link_to '遊び方',page_path('plays') %></li>
+    <li><%= link_to 'お問い合わせ',contact_path %></li>
   </ul>
 </div>

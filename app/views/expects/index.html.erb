@@ -1,9 +1,8 @@
-<font color="black">
 <div class="rank" >
-<h1>予想一覧</h1>
+<h1>本日の試合予想一覧</h1>
 </div>
 <%= render 'search' %>
-<table class="table table-condensed">
+<table border="3" width="1000" height="1000">
   <thead>
     <tr>
       <th scope="col">球団</th>
@@ -20,7 +19,7 @@
       <td><%= e.user.name %></td>
       <td><%= e.game.team_a %>-<%= e.game.team_b %></td>
       <td><%= e.home_score %>-<%= e.away_score %></td>
-      <td><%= l(e.created_at, format: :long)%></td>
+      <td><%= l(e.created_at, format: :short)%></td>
      </tr>
      <% end %>
     

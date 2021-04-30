@@ -1,4 +1,7 @@
-/*
+ @import 'toastr';
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -13,13 +16,10 @@
  *= require_tree .
  *= require_self
  */
- @import 'toastr';
- @import "bootstrap-sprockets";
- @import "bootstrap";
-
+ 
  
 
-* {
+ * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -77,13 +77,13 @@ input {
 .cp_fullscreenmenu .menu ul li a {
   display: block;
   padding: 10px 0;
-  color: #ffffff;
+  color: #efedf3;
 }
 .cp_fullscreenmenu .menu ul li a:hover {
-  color: #d10c3ec9;
+  color: #d3cb60;
 }
 .cp_fullscreenmenu .menu ul li:hover {
-  background: #e9d6d6;
+  background: #1f1e1e;
 }
 
 .cp_fullscreenmenu .menuEffects {
@@ -122,7 +122,7 @@ input {
   right: 0;
   content: '';
   transform: rotate(-45deg);
-  background-color: #f06161;
+  background-color: #f56595;
 }
 .cp_fullscreenmenu #menuToggle:not(:checked) ~ .menuEffects ul {
   transform: translateY(-30%);
@@ -152,7 +152,7 @@ input {
   width: 24px;
   height: 4px;
   border-radius: 2px;
-  background-color: #cc4672;
+  background-color: #fa68b1;
   transition: all 0.3s ease;
 }
 .cp_fullscreenmenu .open {
@@ -168,7 +168,6 @@ input {
   top: 4px;
   content: '';
 }
-
 
 
  
@@ -202,9 +201,6 @@ header {
   display: flex;
   align-items: center;
 }
-.bar{
-  padding-bottom: 10px;
-}
 
 .header-menu4 {
   position: absolute;
@@ -214,15 +210,15 @@ header {
 }
 .header-menu1 {
   position: absolute;
-  color: #e74d4d;
-  top: 60px;
-  left: 50px;
+  color: #fafafa;
+  top: 20px;
+  left: 10px;
 }
 .header-menu2 {
   position: absolute;
   color: #e74d4d;
-  top: 60px;
-  left: 250px;
+  top: 100px;
+  left: 10px;
 }
 .header-menu3 {
   color: #e74d4d;
@@ -251,8 +247,8 @@ header {
   
 body{
   background-color: #000003;
-  background-image: url(stadium1.jpg);
-  background-color:rgba(12, 5, 5, 0.4);
+  background-image: url(stadium5.jpg);
+  background-size: contain;
   background-blend-mode:lighten;
   background-position: center center;
   background-repeat: no-repeat;
@@ -278,12 +274,12 @@ body{
 }
 .logo_image {
   margin-top: 0px;
-  left: 20px;
-  height     : 150px;
-  background-size: 10%;
-  width: 40%
+  margin-right: 10px;
+  height: 160px;
+  width: 100%
   
 }
+
 
 .text1 {
   margin-left: 10px;
@@ -455,8 +451,8 @@ body{
   90% {top: 0;transform: scale(1.15,0.9);}
 }
 
-.position {
-  margin-bottom: 20%;
+.position{
+  text-align: center;
 }
 
 .cp_button13 {
@@ -561,12 +557,12 @@ body{
 a.cp_btn1 {
 	position: relative;
 	display: block;
-	width: 80px;
-	padding: 0.2em;
+	width: 40px;
+	padding: 0.3em;
 	text-align: center;
 	font-weight: bold;
 	text-decoration: none;
-	color: rgb(224, 13, 13);
+	color: rgb(230, 69, 69);
 }
 a.cp_btn1:before {
 	position: absolute;
@@ -614,29 +610,30 @@ a.cp_btn1:hover:before {
 }
 .team-rank {
   position: relative;
-  padding-left: 82%;
-  padding-top: 50px;
+  padding-left: 30px;
+  top: 170px;
+
 
 }
 .fan-rank {
   position: relative;
-  padding-left: 82%;
-  top: 120px;
+  padding-left: 350px;
+  top: 148px;
   
 
 }
 .rank {
   text-align: center;
-  margin-bottom: 10%;
-  margin-top: 5%;
+  margin-bottom: 15%;
+  margin-top: 10%;
 }
 .rank1 {
   text-align: center;
-  margin-bottom: 10%;
-  margin-top: 10%;
+  margin-bottom: 15%;
+  margin-top: 15%;
 }
 .date {
- margin-left: 80px;
+ margin-left: 160px;
 position: relative;
 margin-bottom: 80px;
 }
@@ -656,9 +653,9 @@ margin-bottom: 80px;
 }
 
 .point {
-  margin-bottom: 10%;
+  margin-bottom: 15%;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 15%;
 }
 
 tr {
@@ -821,8 +818,8 @@ tr {
 .cp_button06 {
 	position: relative;
 	z-index: 1;
-	padding: 1em;
-	width: 160px;
+	padding: 0.5em;
+	width: 10px;
 	line-height: 1.4;
 	cursor: pointer;
 	transition: color .3s cubic-bezier(.02,.01,.47,1),border-color .3s cubic-bezier(.02,.01,.47,1);
@@ -991,9 +988,7 @@ tr {
 .done {
   margin-top: 5%;
 }
-.contact {
- left: 25%;
-}
+
 .play1 {
   margin-top: 0px;
   left: 20px;
@@ -1007,9 +1002,15 @@ tr {
   text-align: center;
 }
 .margin {
-  margin-bottom: 15%;
+  margin-bottom: 10%;
 }
  
+ 
+.table1 {
+  margin-top:-565px;
+  margin-left: 55%;
+
+}
 table {
   width: 100%;
   table-layout: fixed;

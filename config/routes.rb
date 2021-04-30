@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   end
   resources :expects, only: %i[ index ]
   get 'contact' => 'contacts#index'    
-  post 'contact/thanks' => 'contacts#thanks'    
+  post 'contact/thanks' => 'contacts#thanks' 
+  get 'contact/done'   => 'contacts#done'
 
 end

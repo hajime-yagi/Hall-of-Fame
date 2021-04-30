@@ -4,7 +4,10 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag  'top', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag  'phone_top', media: '(min-width: 320px) and (max-width: 639px)', 'data-turbolinks-track': 'reload' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
+  <%= favicon_link_tag('favicon') %>
 </head>
 <body>
 <%= yield %>
