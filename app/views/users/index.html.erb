@@ -3,6 +3,7 @@
 <h1>ユーザー一覧</h1>
 </div>
 <%= render 'search' %>
+<div class="margin">
 <table class="table table-condensed"> 
     <thead>
     <tr>
@@ -33,4 +34,5 @@
   <%= paginate @users %>
 </table>
 <%= paginate @users %>
+</div>
 </div>

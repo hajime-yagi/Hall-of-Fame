@@ -1,14 +1,11 @@
 <% content_for(:title, '球団別ポイント表') %>
-<div class="team-rank">
-<%= link_to '球団内ランキング', fan_rank_path, class: "cp_button06" %>
-  </div>
-  <div class="fan-rank">
-  <%= link_to '個人ランキング', rank_path, class: "cp_button06"%>
-  </div>
-<h1 class="point"><%= "球団別ポイント表" %></h1>
-
+<div class="rank">
+<h1><%= "球団別ポイント表" %></h1>
+</div>
+<%= link_to '球団内順位', fan_rank_path, class: "cp_button06 team-rank" %>
+<%= link_to '個人ランキング', rank_path, class: "cp_button06 fan-rank"%>
     <table border="3" width="100" height="500">
-       <h2> セリーグ </h2>
+    <h2 class="central"> セリーグ </h2>
          <tr>
         <th><div class="t1 text-center"><font color ="#F97709">読売ジャイアンツ</font></div></th>
            <td><div class="t1 text-center"><font color ="#F97709"><%= @giants %>p</font></td>
@@ -40,7 +37,7 @@
          </div>
 
          <table border="3" width="100" height="500" >
-         <h2 > パリーグ </h2>
+         <h2 class="pacific"> パリーグ </h2>
          <tr>
          <th><div class="t1 text-center"><font color ="#f9ca00">ソフトバンクホークス</font></div></th>
            <td><div class="t1 text-center"><font color ="#f9ca00"><%= @hawks %>p</font></div></td>
@@ -67,3 +64,5 @@
          </tr>
          </div>
          </table>
+         <div class="rank">
+         </div>

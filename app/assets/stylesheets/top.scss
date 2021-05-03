@@ -8,17 +8,14 @@ div#contents{
 
 body{
   background-color: #020202;
-  background-image: url(top.jpg);
+  background-image: url(topayaya.jpg);
   background-blend-mode:lighten;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
-  
 
-
-  
   .bound-container{
     position:relative;
     width:100%;
@@ -52,11 +49,22 @@ body{
     90% {top: 0;transform: scale(1.15,0.9);}
   }
 
-.hoge {
-  margin-left: 1000px;
-  margin-top: 150px;
+  .login {
+    position: absolute;
+    left:1100px;
+    top :380px;
+  }
+  .signup{
+    position: relative;
+   left: 420px;
+   top: 470px;
+  }
+  .topmypage{
+    position: absolute;
+    left: 1110px;
+    top: 550px;
+  }
 
-}
 body {
   font-family: monospace;
 }
@@ -177,8 +185,52 @@ a.cp_btn {
 a.cp_btn:hover {
 	transform: rotateY(360deg);
 }
+.cp_button15 {
+position: relative;
+width: 100%;
+padding-top: 25.92%;
+display: block;
+background-size: 100% 100%;
+font-family: 'luckiest guy';
+font-size: 28px;
+margin-bottom: 20px;
+text-decoration: none;
+color: #333;
+}
+ 
 
+.cp_button15.background-button {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/323909/yellow-shadow.png);
 
+  &:after {
+    content: attr(title);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/323909/yellow-top.png);
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  &:hover:after {
+    -webkit-transform: translate(2.5%, 10%);
+    transform: translate(2.5%, 10%);
+    text-shadow: 2px 2px 1px white;
+    color: black;
+  }
+}
 
-
+.button-wrapper {
+  width: 356px;
+  display: inline-block;
+  margin: 20px;
+  &:nth-child(2) {
+    -webkit-filter: hue-rotate(288deg);
+    filter: hue-rotate(288deg);
+  }
+}

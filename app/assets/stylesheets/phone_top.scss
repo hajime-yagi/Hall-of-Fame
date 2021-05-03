@@ -8,12 +8,12 @@ div#contents{
 
 body{
   background-color: #020202;
-  background-image: url(top.jpg);
+  background-image: url(phoneayaya.jpg);
   background-blend-mode:lighten;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
 }
 
   
@@ -53,11 +53,22 @@ body{
     90% {top: 0;transform: scale(1.15,0.9);}
   }
 
-.hoge {
-  margin-left: 380px;
-  margin-top: 10px;
+  .login {
+    position: absolute;
+    left: 380px;
+    top: 30px;
+  }
+  .signup{
+    position: absolute;
+    left:50px;
+    top:400px;
+  }
+  .topmypage{
+    position: absolute;
+    left:380px;
+    top:150px;
+  }
 
-}
 body {
   font-family: monospace;
 }
@@ -74,7 +85,7 @@ body {
   transition: transform 0.3s;
   
   border: 0;
-  background: #1717da;
+  background: #343494;
 }
 .cp_button14:before {
   position: absolute;
@@ -166,11 +177,11 @@ a.cp_btn {
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	color: #e72e6c;
+	color: #f7a131;
 	width: 70px;
 	height: 70px;
 	line-height: 70px;
-	border: double 4px #ff2290;
+	border: double 4px #ff9f22;
 	border-radius: 50%;
 	overflow: hidden;
 	transition: .6s;
@@ -178,3 +189,66 @@ a.cp_btn {
 a.cp_btn:hover {
 	transform: rotateY(360deg);
 }
+
+.cp_button06 {
+	position: relative;
+	z-index: 1;
+	padding: 1.5em;
+	width: 160px;
+	line-height: 1.4;
+	cursor: pointer;
+	transition: color .3s cubic-bezier(.02,.01,.47,1),border-color .3s cubic-bezier(.02,.01,.47,1);
+	color: #F06292;
+	background: transparent;
+	overflow: hidden;
+	border: 1px solid #F06292;
+	border-radius: 100px;
+	background: rgb(236, 62, 129);
+}
+.cp_button06:after, .cp_button06:before {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 120%;
+	content: '';
+	transition: transform 0.15s cubic-bezier(0.02,0.01,0.47,1),opacity 0.15s cubic-bezier(0.02,0.01,0.47,1);
+	opacity: 0;
+}
+.cp_button06:before {
+	background: #D81B60;
+	-webkit-transform: translate3d(-110%,-10%,0) skewX(-20deg);
+	transform: translate3d(-110%,-10%,0) skewX(-20deg);
+}
+.cp_button06:after {
+	-webkit-transform: translate3d(110%,-10%,0) skewX(-20deg);
+	transform: translate3d(110%,-10%,0) skewX(-20deg);
+	background: #F06292;
+}
+.cp_button06:hover {
+	transition: all 0.5s cubic-bezier(0.02,0.01,0.47,1);
+	box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+	color: #ffffff;
+	background: #E91E63;
+	border: 1px solid #F06292;
+}
+.cp_button06:hover:after, .cp_button06:hover:before {
+	transition: transform 0.25s cubic-bezier(0.02,0.01,0.47,1),opacity 0.25s cubic-bezier(0.02,0.01,0.47,1);
+	-webkit-transform: translate3d(50%,-10%,0) skewX(-20deg);
+	transform: translate3d(50%,-10%,0) skewX(-20deg);
+	opacity: 1;
+}
+.cp_button06:active {
+	opacity: 0.5;
+	color: #F06292;
+}
+.cp_button06:focus {
+	border: 1px solid #F06292;
+	color: #F06292;
+}
+.cp_button06:focus:hover {
+	color: #ec56ae;
+	border: 1px solid #F06292;
+}
+

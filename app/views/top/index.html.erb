@@ -1,20 +1,15 @@
 <body>
-<font color="white">
+<div class="login">
+<%= link_to "ログイン",login_path , style: "color:white;" , class: 'cp_btn' %>
+</div>
+<div class="topmypage cp_button14">
+<button><%= link_to "マイページへ", profile_path,style: "color:black;"  %></button><br>
+</div>
+<div class="signup">
+<div class="button-wrapper">
+  <a class="cp_button15 background-button" href="/users/new" title="さぁはじめよう！"></a>
+</div>
+</div>
 
-<div id="three-container"></div>
-
-<div class="hoge">
-<%= link_to "ログイン",login_path , style: "color:black;" , class: 'cp_btn' %>
-<br>
-<%= link_to "新規登録",login_path , style: "color:black;" , class: 'cp_btn' %>
-<br>
-<button class="cp_button14"><%= link_to "マイページへ", profile_path,style: "color:white;"  %></button><br>
-</div>
-<div class="container">
-	<span class="ball"></span>
-	<span class="shadow"></span>
-</div>
-</div>
-</font>
 </body>
 

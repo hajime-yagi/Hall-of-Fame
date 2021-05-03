@@ -328,7 +328,7 @@ body{
   font-size: 30px;
  
 }
-.average1 {
+.average {
   position: absolute;
   top: 380px;
   left: 570px;
@@ -337,15 +337,15 @@ body{
 }
 .home_score{
   position: absolute;
-  top: 290px;
-  left: 500px;
+  top: -40px;
+  left: -10px;
  
  
 }
 .away_score{
   position: absolute;
-  top: 290px;
-  left: 700px;
+  top: -40px;
+  left: 0px;
   
   
  
@@ -389,17 +389,24 @@ body{
   font-size: 18px;
   margin-left: 20px;
 }
+.average1 {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 25px;
+
+}
 .average2 {
   position: absolute;
-  top: 436px;
-  left: 670px;
+  top: 60px;
+  left: 90px;
   font-size: 25px;
 
 }
 .yosoubar {
   position: absolute;
-  left :50px;
-  top :55px;
+  left :32px;
+  top :0px;
 }
 .cp_button09 {
 	display: inline-block;
@@ -457,6 +464,7 @@ body{
 
 .position {
   margin-bottom: 20%;
+  
 }
 
 .cp_button13 {
@@ -612,29 +620,22 @@ a.cp_btn1:hover:before {
 .t9{
   background:#02518c;
 }
-.team-rank {
-  position: relative;
-  padding-left: 82%;
-  padding-top: 50px;
 
+.team-rank {
+ left: 65%;
+ top: -80px;
 }
 .fan-rank {
-  position: relative;
-  padding-left: 82%;
-  top: 120px;
-  
-
+  left:10%;
+  top: -80px
 }
+
 .rank {
   text-align: center;
   margin-bottom: 10%;
   margin-top: 5%;
 }
-.rank1 {
-  text-align: center;
-  margin-bottom: 10%;
-  margin-top: 10%;
-}
+
 .date {
  margin-left: 80px;
 position: relative;
@@ -647,7 +648,8 @@ margin-bottom: 80px;
 }
 .touroku {
   text-align: center;
-  margin-top: 40px;
+  margin-bottom: 30%;
+  margin-top: 60px;
 }
 .ichiran1 {
   text-align: center;
@@ -655,12 +657,12 @@ margin-bottom: 80px;
   padding-top: 30px;
 }
 
-.point {
-  margin-bottom: 10%;
-  text-align: center;
-  margin-top: 5%;
+.central {
+  color: #207e33;
 }
-
+.pacific {
+  color: #38a6b9;
+}
 tr {
   border: 2px solid rgb(94, 87, 87);
 }
@@ -1016,3 +1018,18 @@ table {
   word-break: break-all;
   word-wrap: break-all;
   }
+.margin1{
+  margin-bottom: 30%;
+  
+}
+.direction {
+  margin-left: 300px;
+  margin-bottom: 30%;
+}
+.contact {
+  margin-left: 100px;
+}
+
+
+
+

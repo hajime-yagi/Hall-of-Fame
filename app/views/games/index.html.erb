@@ -11,7 +11,7 @@
     <th scope="col">ステータス</th>
     <th scope="col">対戦</th>
     <th scope="col">開始時間</th>
-    <th scope="col">スコア</th>
+   <th scope="col">スコア</th> 
     <th scope="col">スタジアム</th>
     <th scope="col"></th>
   </tr>
@@ -20,15 +20,14 @@
     <tr>
        <% @games.zip(@expects) do |g,e| %>
         <td><%= g.status  %></td>
-        <td><%= g.team_a %>
-        VS.<%= g.team_b %></td>
+        <td><%= g.team_a %>-<%= g.team_b %></td>
         <td><%= g.match_time %></td>
         <td><%= g.result_home %>-<%= g.result_away %></td>
         <td><%= g.stadium %></td>
-        <% if !g.match_time.nil? && !g.nil?%>
+        <% if !g.match_time.nil? && !g.nil?%> 
         <td><%= link_to "予想する", new_game_expect_path(g) ,class: 'cp_button13'%></td>
         <% else %>
-        <td><%= "予想できません" %></td>
+        <td>締め切りました</td>
         <% end %>
       </tr>
       <% end %>

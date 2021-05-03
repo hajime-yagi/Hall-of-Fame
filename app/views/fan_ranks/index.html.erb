@@ -1,13 +1,8 @@
-<font color="black">
- <div class="team-rank">
-  <%= link_to '球団別ポイント表',team_rank_path,class: "cp_button06" %>
-  </div>
-  <div class="fan-rank">
-  <%= link_to '個人ランキング',rank_path ,class: "cp_button06" %>
-  </div>
-  <div class="rank1">
+<div class="rank">
   <h1><%= current_user.favorite_team_i18n %>ファンランキング</h1>
   </div>
+  <%= link_to '球団別ポイント表',team_rank_path,class: "cp_button06 team-rank" %>
+  <%= link_to '個人ランキング',rank_path ,class: "cp_button06 fan-rank" %>
   <table  class="table table-condensed"> 
       <thead>
       <tr>
@@ -30,4 +25,5 @@
         </thead>
      </tbody>
     </table>
-  </font>
+<div class="rank">
+</div>

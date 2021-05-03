@@ -3,7 +3,7 @@ class ExpectsController < ApplicationController
   
   def index
     @q = Expect.ransack(params[:q])
-    @expects = @q.result(distinct: true).today.order(created_at: 'DESC').page(params[:page])
+    @expects = @q.result(distinct: true).order(created_at: "DESC").page(params[:page])
   end
 
   def new
@@ -32,9 +32,14 @@ class ExpectsController < ApplicationController
 
   def update
     @expect = current_user.expects.find(params[:id])
-    redirect_to profile_path(current_user) if @expect.update!(expect_params)
+    if @expect.update!(expect_params)
+    redirect_to profile_path(current_user) 
+    flash[:success] = "予想を変更しました"
+    else
+      redirect_to profile_path(current_user) 
+      flash[:success] = "予想を変更できませんでした"
   end
-
+end
   
 
   def expect_params

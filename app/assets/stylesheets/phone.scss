@@ -326,22 +326,29 @@ body{
 }
 .average1 {
   position: absolute;
-  top: 380px;
-  left: 570px;
+  top: 60px;
+  left: 20px;
+  font-size: 25px;
+
+}
+.average2 {
+  position: absolute;
+  top: 60px;
+  left: 90px;
   font-size: 25px;
 
 }
 .home_score{
   position: absolute;
-  top: 290px;
-  left: 500px;
- 
+  top: 40px;
+  left: -400px;
+  
  
 }
 .away_score{
   position: absolute;
-  top: 290px;
-  left: 700px;
+  top: 40px;
+  left: -370px;
   
   
  
@@ -349,33 +356,33 @@ body{
 .home_team {
   position: absolute;
   top: 280px;
-  left: 330px;
+  left: 100px;
   font-size: 30px;
 }
 .away_team {
   position: absolute;
   top: 280px;
-  left: 840px;
+  left: 310px;
   font-size: 30px;
  
 }
 .bo- {
   position: absolute;
   top: 280px;
-  left: 620px;
+  left: 240px;
   font-size: 25px;
  
 }
 .time {
   position: absolute;
   top: 320px;
-  left: 590px;
+  left: 205px;
   font-size: 25px;
 }
 .yosou {
   position: absolute;
   top: 500px;
-  left: 592px;
+  left: 210px;
   font-size: 25px;
 }
 .pitcher {
@@ -385,17 +392,17 @@ body{
   font-size: 18px;
   margin-left: 20px;
 }
-.average2 {
+.average {
   position: absolute;
-  top: 436px;
-  left: 670px;
+  top: 370px;
+  left: 185px;
   font-size: 25px;
 
 }
 .yosoubar {
   position: absolute;
-  left :50px;
-  top :55px;
+  left :32px;
+  top :0px;
 }
 .cp_button09 {
 	display: inline-block;
@@ -453,6 +460,7 @@ body{
 
 .position{
   text-align: center;
+  margin-bottom: 40%;
 }
 
 .cp_button13 {
@@ -609,29 +617,20 @@ a.cp_btn1:hover:before {
   background:#02518c;
 }
 .team-rank {
-  position: relative;
-  padding-left: 30px;
-  top: 170px;
-
-
-}
-.fan-rank {
-  position: relative;
-  padding-left: 350px;
-  top: 148px;
-  
-
-}
-.rank {
-  text-align: center;
-  margin-bottom: 15%;
-  margin-top: 10%;
-}
-.rank1 {
-  text-align: center;
-  margin-bottom: 15%;
-  margin-top: 15%;
-}
+  left: 260px;
+  top: -200px;
+ }
+ .fan-rank {
+   left:-90px;
+   top: -200px
+ }
+ 
+ .rank {
+   text-align: center;
+   margin-bottom: 20%;
+   margin-top: 90px;
+ }
+ 
 .date {
  margin-left: 160px;
 position: relative;
@@ -644,7 +643,8 @@ margin-bottom: 80px;
 }
 .touroku {
   text-align: center;
-  margin-top: 40px;
+  margin-bottom: 400px;
+  margin-top: 60px;
 }
 .ichiran1 {
   text-align: center;
@@ -1016,4 +1016,13 @@ table {
   table-layout: fixed;
   word-break: break-all;
   word-wrap: break-all;
+  }
+
+  .direction {
+    margin-left: 20px;
+    margin-bottom: 30%;
+    margin-top: 10%;
+  }
+  .contact {
+    margin-left: 50px;
   }

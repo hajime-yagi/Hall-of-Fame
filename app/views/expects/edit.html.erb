@@ -1,57 +1,60 @@
-<font color="black">
-<%= form_with model:@expect,url:game_expects_path, local: true do |f| %>
-<div  class="home_team">
-<%= @game.team_a %><br><div  class="pitcher"><%= @game.pitcher_a %><br>
-</div>
-</div>
-<div class="home_score" %>
-<% if !@game.match_time.nil? %>
-<%= f.select :home_score, [[0,0],[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11],[12,12],[13,13],[14,14],[15,15],[16,16],[17,17],[18,18],[19,19],[20,20],
-[21,21],[22,22],[23,23],[24,24],[25,25],[26,26],[27,27],[28,28],[29,29],[30,30]] %>
-<% end %>
-</div>
-<div  class="bo-">
--
-</div>
-<div class="away_team">
-<%= @game.team_b %><br><div class="away_pitcher"><%= @game.pitcher_b %><br>
-</div>
-</div>
-<div class="away_score" %>
-<% if !@game.match_time.nil? %>
-<%= f.select :away_score, [[0,0],[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11],[12,12],[13,13],[14,14],[15,15],[16,16],[17,17],[18,18],[19,19],[20,20],
-[21,21],[22,22],[23,23],[24,24],[25,25],[26,26],[27,27],[28,28],[29,29],[30,30]] %>
-<% end %>
-</div>
-
-<div  class="time">
-<% if !@game.match_time.nil? %>
-<%= @game.match_time %><br>
-</div>
-<div  class="yosou">
-<%= f.submit "予想" ,class: 'btn btn-primary'%>
-<% else %> 
-<%= @game.result_home %>-<%= @game.result_away %><br>
-<% end %>
-<% end %>
-</div>
-<div  class="average1">
- <h3>予想平均点</h3>
-  <% score = @expects.all.sum(:home_score) %>
-  <% count = @expects.count %>
-  <% if @expects.count == 0 %>
-  0
-  <% else %>
-  <%= score/count   %><div class="yosoubar"> -</div>
+<div class="position" >
+<h1 class="touroku">予想編集</h1>
+<%= form_with model:@expect,url:game_expect_path, local: true do |f| %>
+  <div  class="home_team">
+  <%= @game.team_a %><br><div  class="pitcher"><%= @game.pitcher_a %><br>
+  </div>
+  </div>
+  <div class="cp_ipselect cp_sl03 home_score" %>
+  <% if !@game.match_time.nil? %>
+  <%= f.select :home_score, [[0,0],[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11],[12,12],[13,13],[14,14],[15,15],[16,16],[17,17],[18,18],[19,19],[20,20],
+  [21,21],[22,22],[23,23],[24,24],[25,25],[26,26],[27,27],[28,28],[29,29],[30,30]] %>
   <% end %>
   </div>
-  <div  class="average2">
-  <% score = @expects.all.sum(:away_score) %>
-  <% count = @expects.count %>
-  <% if @expects.count == 0 %>
-  0
-  <% else %>
-  <%= score/count   %>
+  <div  class="bo-">
+  -
+  </div>
+  <div class="away_team">
+  <%= @game.team_b %><br><div class="away_pitcher"><%= @game.pitcher_b %><br>
+  </div>
+  </div>
+  <div class="cp_ipselect1 cp_sl03 away_score" %>
+  <% if !@game.match_time.nil? %>
+  <%= f.select :away_score, [[0,0],[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11],[12,12],[13,13],[14,14],[15,15],[16,16],[17,17],[18,18],[19,19],[20,20],
+  [21,21],[22,22],[23,23],[24,24],[25,25],[26,26],[27,27],[28,28],[29,29],[30,30]] %>
   <% end %>
   </div>
-</font>
+  
+  <div  class="time">
+  <% if !@game.match_time.nil? %>
+  <%= @game.match_time %><br>
+  </div>
+  <div  class="yosou">
+  <%= f.submit "予想" , class: "cp_button13" %>
+  <% else %> 
+  <%= @game.result_home %>-<%= @game.result_away %><br>
+  <% end %>
+  <% end %>
+  </div>
+  <div  class="average">
+   <h3>予想平均点</h3>
+   <div  class="average1">
+    <% score = @expects.all.sum(:home_score) %>
+    <% count = @expects.count %>
+    <% if @expects.count == 0 %>
+    0
+    <% else %>
+    <%= score/count   %><div class="yosoubar">&thinsp;- </div>
+    <% end %>
+    </div>
+    <div  class="average2">
+    <% score = @expects.all.sum(:away_score) %>
+    <% count = @expects.count %>
+    <% if @expects.count == 0 %>
+    0
+    <% else %>
+    <%= score/count   %>
+    <% end %>
+    </div>
+  </div>
+  </div>

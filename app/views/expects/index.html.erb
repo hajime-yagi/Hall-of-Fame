@@ -1,12 +1,13 @@
+
 <div class="rank" >
-<h1>本日の試合予想一覧</h1>
+<h1>試合予想一覧</h1>
 </div>
 <%= render 'search' %>
-<table border="3" width="1000" height="1000">
+<table class="table hight="300">
   <thead>
     <tr>
       <th scope="col">球団</th>
-      <th scope="col">ユーザーネーム</th>
+      <th scope="col">名前</th>
       <th scope="col">試合</th>
       <th scope="col">予想スコア</th>
       <th scope="col">予想日時</th>
@@ -24,6 +25,11 @@
      <% end %>
     
   </tbody>
+  <div class="pagenate">
+  <%= paginate @expects %>
 </table>
 <%= paginate @expects %>
-</font>
+</div>
+<div class="rank" >
+
+</div>

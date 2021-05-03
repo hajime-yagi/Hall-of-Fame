@@ -1,14 +1,9 @@
-
- <div class="team-rank">
-  <%= link_to '球団ポイント表',team_rank_path,class: "cp_button06" %>
-  </div>
-  <div class="fan-rank">
-  <%= link_to '所属球団内ランク',fan_rank_path,class: "cp_button06" %>
-  </div>
-  <div class="rank">
+<div class="rank">
   <h1>ランキング</h1>
-  </div>
-  <table class="table table-condensed"> 
+</div>
+  <%= link_to '球団ポイント表',team_rank_path,class: "cp_button06 team-rank"  %>
+  <%= link_to '球団内順位',fan_rank_path,class: "cp_button06 fan-rank" %>
+  <table class="table table-condensed">
       <thead>
       <tr>
       <th scope="col">順位</th>
@@ -30,4 +25,5 @@
         </thead>
      </tbody>
     </table>
-  </font>
+    <div class="rank">
+    </div>

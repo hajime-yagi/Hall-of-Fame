@@ -1,43 +1,30 @@
-<div class="container">
-<div class="row mb-3">
-<div class="position" >
-<h1>お問い合わせフォーム</h1>
+<div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-9">
+                    <div id="login-box" class="col-md-12">
+                    <div class="direction">
+<h1 class="contact">お問い合わせフォーム</h1>
 <%= form_with model:@contact, url:contact_thanks_path, local: true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="row mb-3">
-  <div class="col-sm-2 col-form-label col-form-label-sm">
+  <div class="form-group">
   <%= f.label :name , "名前"%>
-  </div>
-  <div class="col-sm-10">
 <%= f.text_field :name, class: "form-control" %>
 </div>
-</div>
-<div class="row mb-3">
-<div class="col-sm-2 col-form-label col-form-label-sm">
+<div class="form-group">
 <%= f.label :email , "Eメール"%>
-</div>
-<div class="col-sm-10">
 <%= f.email_field :email, class: 'form-control' %>
 </div>
-</div>
-<div class="row mb-3">
-<div class="col-sm-2 col-form-label col-form-label-sm">
+<div class="form-group">
 <%= f.label :subject , "用件"%>
-</div>
-<div class="col-sm-10">
 <%= f.text_field :subject, class: 'form-control' %>
 </div>
-</div>
-<div class="row mb-3">
- <div class="col-sm-2 col-form-label col-form-label-lg">
+<div class="form-group">
 <%= f.label :message ,'お問い合わせ内容' %>
-</div>
-<div class="col-sm-10">
 <%= f.text_area :message, class: 'form-control' %>
-</div>
-</div>
 <div class="actions">
 <%= f.submit "送信", class: "cp_button13" %>
+</div>
 </div>
 <% end %>
 </div>
@@ -45,8 +32,3 @@
 </div>
 </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
