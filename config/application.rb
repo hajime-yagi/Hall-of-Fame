@@ -35,10 +35,11 @@ module HallOfFame
     # Don't generate system test files.
     config.generators.system_tests = nil
     config.generators do |g|
-      g.skip_routes true
-      g.assets false
+      g.skip_routes false
+      g.assets true
       g.helper false
       g.test_framework false
+      g.javascripts true
     end
   end
 end

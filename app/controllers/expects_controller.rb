@@ -3,7 +3,7 @@ class ExpectsController < ApplicationController
   
   def index
     @q = Expect.ransack(params[:q])
-    @expects = @q.result(distinct: true).order(created_at: "DESC").page(params[:page])
+    @expects = @q.result(distinct: true).includes(:user,:game).order(created_at: "DESC").page(params[:page])
   end
 
   def new

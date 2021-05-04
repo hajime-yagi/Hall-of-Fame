@@ -3,6 +3,7 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
   has_many :expects
+  has_many :messages, dependent: :destroy
   validates :name, presence: true
   validates :email, uniqueness: true, presence: true
   validates :password, presence: true, on: :create
