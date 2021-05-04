@@ -1,4 +1,48 @@
-<div class="message" id="message-<%= message.id %>">
-  <p><%= message.user.name %>(<%= message.user.favorite_team_i18n %>): <%= l message.created_at, format: '%Y年%-m月%-d日(%a) %H:%M' %></p>
-  <%= simple_format(h(message.content)) %>
+<% if message.user == current_user %>
+<div class="kaiwa"">
+ <figure class="kaiwa-img-right">
+ <% if message.user.avatar.present? %>
+ <%= image_tag message.user.avatar.url, class: 'rounded-circle mr15', width: '20px', height: '20px' %>
+<% else %>
+<%= image_tag 'player.jpg', class: 'rounded-circle mr15', width: '20px', height: '20px' %>
+<% end %>
+ <figcaption class="kaiwa-img-description">
+ <br>
+ <%= message.user.name %><br>(<%= message.user.favorite_team_i18n %>)
+ </figcaption>
+ </figure>
+ <div class="kaiwa-text-left">
+   <p class="kaiwa-text">
+   <div class="message" id="message-<%= message.id %>">
+   <%= simple_format(h(message.content)) %>
+   <%= l message.created_at, format: '%-m月%-d日(%a) %H:%M' %>
+   </p>
+ </div>
+ </div>
 </div>
+
+<% else %>
+<div class="kaiwa">
+ <figure class="kaiwa-img-left">
+ <% if message.user.avatar.present? %>
+ <%= image_tag message.user.avatar.url, class: 'rounded-circle mr15', width: '40px', height: '40px' %>
+<% else %>
+<%= image_tag 'player.jpg', class: 'rounded-circle mr15', width: '40px', height: '40px' %>
+<% end %>
+ <figcaption class="kaiwa-img-description">
+ <br>
+<%= message.user.name %><br>(<%= message.user.favorite_team_i18n %>)
+ </figcaption>
+ </figure>
+ <div class="kaiwa-text-right">
+   <p class="kaiwa-text">
+   <div class="message" id="message-<%= message.id %>">
+   <%= simple_format(h(message.content)) %>
+   <%= l message.created_at, format: '%-m月%-d日(%a) %H:%M' %>
+   </p>
+ </div>
+ </div>
+</div>
+
+
+ <% end %>
