@@ -7,17 +7,16 @@ div#contents{
 }
 
 body{
-  background-color: #020202;
-  background-image: url(phoneayaya.jpg);
+  background-color: #000003;
+  background-image: url(kaizen4.jpg);
   background-blend-mode:lighten;
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: 100%;
   background-attachment: fixed;
   background-size: cover;
-}
-
-  
-
+  }
+ 
 
   
   .bound-container{
@@ -55,18 +54,18 @@ body{
 
   .login {
     position: absolute;
-    left: 380px;
-    top: 30px;
+    left: 150px;
+    top: 600px;
   }
   .signup{
     position: absolute;
-    left:50px;
-    top:400px;
+    left:20px;
+    top: 400px;
   }
   .topmypage{
     position: absolute;
-    left:380px;
-    top:150px;
+    left:290px;
+    top:600px;
   }
 
 body {
@@ -178,9 +177,9 @@ a.cp_btn {
 	text-align: center;
 	text-decoration: none;
 	color: #f7a131;
-	width: 70px;
-	height: 70px;
-	line-height: 70px;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
 	border: double 4px #ff9f22;
 	border-radius: 50%;
 	overflow: hidden;

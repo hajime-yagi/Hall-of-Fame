@@ -1,15 +1,14 @@
 <body>
+<% content_for(:title, 'トップ') %>
 <div class="login">
-<%= link_to "ログイン",login_path , style: "color:white;" , class: 'cp_btn' %>
+<%= link_to "ログイン",login_path , style: "color:black;" , class: 'cp_btn' %>
 </div>
-<div class="topmypage cp_button14">
-<button><%= link_to "マイページへ", profile_path,style: "color:black;"  %></button><br>
+<div class="topmypage">
+<%= link_to "マイページ", profile_path , style: "color:black;" , class: 'cp_btn' %>
 </div>
 <div class="signup">
 <div class="button-wrapper">
   <a class="cp_button15 background-button" href="/users/new" title="さぁはじめよう！"></a>
 </div>
 </div>
-
 </body>
-

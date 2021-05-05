@@ -58,7 +58,7 @@ input {
   background-size: 100%;
 }
 .cp_fullscreenmenu .menu .menucont {
-  font-size: 40px;
+  font-size: 35px;
   position: relative;
   top: 50%;
   margin-top: -200px;
@@ -85,7 +85,7 @@ input {
 .cp_fullscreenmenu .menu ul li:hover {
   background: #110f0f;
 }
-
+header
 .cp_fullscreenmenu .menuEffects {
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s;
@@ -193,10 +193,10 @@ $black: #0e0101;
 
 
 header {
-  background-color: rgb(10, 4, 4);
+  background-color: rgb(0, 0, 0);
   width: 100%;
   padding: 15px 10px;
-  height: 160px;
+  height: 80px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -229,15 +229,7 @@ header {
 
 
 
-.table-condensed > thead > tr > th,
-.table-condensed > tbody > tr > th,
-.table-condensed > tfoot > tr > th,
-.table-condensed > thead > tr > td,
-.table-condensed > tbody > tr > td,
-.table-condensed > tfoot > tr > td {
-  padding: 30px;  /* 5px の値を変更 */
-}
-
+  
 .text {
   position: relative;
   top: 100px;
@@ -246,7 +238,7 @@ header {
 }
   
 body{
-  background-color: #000003;
+  background-color: #8d8d91;
   background-image: url(stadium5.jpg);
   background-size: contain;
   background-blend-mode:lighten;
@@ -254,6 +246,7 @@ body{
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
+  background-size: cover;
   }
   body {
     font-family: monospace;
@@ -275,8 +268,9 @@ body{
 .logo_image {
   margin-top: 0px;
   margin-right: 10px;
-  height: 160px;
-  width: 100%
+  height: 80px;
+  width: 80%;
+  padding: 30% ,30%;
   
 }
 
@@ -617,14 +611,26 @@ a.cp_btn1:hover:before {
   background:#02518c;
 }
 .team-rank {
-  left: 260px;
-  top: -200px;
+  position: absolute;
+  top: 310px;
+  left: 20px;
  }
  .fan-rank {
-   left:-90px;
-   top: -200px
+  position: absolute;
+   top: 310px;
+   left:280px;
  }
  
+ .team-rank1 {
+  position: absolute;
+  top: 350px;
+  left: 40px;
+ }
+ .fan-rank1 {
+  position: absolute;
+   top: 350px;
+   left:250px;
+ }
  .rank {
    text-align: center;
    margin-bottom: 20%;
@@ -632,7 +638,7 @@ a.cp_btn1:hover:before {
  }
  
 .date {
- margin-left: 160px;
+margin-left: 120px;
 position: relative;
 margin-bottom: 80px;
 }
@@ -945,8 +951,8 @@ tr {
 #footer ul li a {
   color: #e97492;
   text-decoration: none;
-  padding: 10px;
-  margin: 10px;
+  padding: 5px;
+  margin: 5px;
 }
 #footer ul li a:hover {
   color: rgb(243, 243, 85);  
@@ -1004,7 +1010,9 @@ tr {
 .margin {
   margin-bottom: 10%;
 }
- 
+.table-condensed {
+  height: 1000px;
+}
  
 .table1 {
   margin-top:-565px;
@@ -1025,4 +1033,97 @@ table {
   }
   .contact {
     margin-left: 50px;
+  }
+  a.btn-flat {
+    overflow: hidden;
+    padding: 1rem 4rem;
+    color: #fff;
+    border-radius: 0;
+    background: #000;
+  }
+  
+  a.btn-flat span {
+    position: relative;
+  }
+  
+  a.btn-flat:before {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 150%;
+    height: 500%;
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-70%) rotate(135deg);
+    transform: translateX(-98%) translateY(-70%) rotate(135deg);
+    background: #ee2393;
+  }
+  
+  a.btn-flat:hover:before {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(135deg);
+    transform: translateX(-9%) translateY(-25%) rotate(135deg);
+  }
+  
+  a.btn-flat1 {
+    overflow: hidden;
+  
+    padding: 1rem 3.5rem;
+  
+    color: #fff;
+    border-radius: 0;
+    background: #000;
+  }
+  
+  a.btn-flat1 span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  a.btn-flat1:before {
+    position: absolute;
+    top: 0;
+    left: calc(-150% + 50px);
+  
+    width: 150%;
+    height: 500%;
+  
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: rotate(45deg) translateX(0) translateY(0);
+    transform: rotate(45deg) translateX(0) translateY(0);
+  
+    background: #fff100;
+  }
+  
+  a.btn-flat1:after {
+    position: absolute;
+    top: -400%;
+    right: calc(-150% + 50px);
+  
+    width: 150%;
+    height: 500%;
+  
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: rotate(45deg) translateX(0) translateY(0);
+    transform: rotate(45deg) translateX(0) translateY(0);
+  
+    background: #fff100;
+  }
+  
+  a.btn-flat1:hover:before {
+    -webkit-transform: rotate(45deg) translateX(0) translateY(-50%);
+    transform: rotate(45deg) translateX(0) translateY(-50%);
+  }
+  
+  a.btn-flat1:hover:after {
+    -webkit-transform: rotate(45deg) translateX(0) translateY(50%);
+    transform: rotate(45deg) translateX(0) translateY(50%);
+  }
+  
+  .tate {
+   margin-bottom: 300px;
   }

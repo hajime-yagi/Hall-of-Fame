@@ -89,6 +89,9 @@ messageButton.addEventListener('click', () => {
          changeLineCount(newLineCount)
      }
  }
+ const footer = document.getElementById('send')
+ let footerHeight = footer.scrollHeight
+ let newFooterHeight, footerHeightDiff
 
  const changeLineCount = (newLineCount) => {
      // フォームの行数を変更
@@ -112,4 +115,6 @@ messageButton.addEventListener('click', () => {
          })
      }
  }, {passive: true});
+ 
+
 })

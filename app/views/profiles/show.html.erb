@@ -41,25 +41,23 @@
      <div class="row">
        <div class="col-md-10 offset-md-1">
 <h1 class="mypage"><%= "予想履歴" %></h1>
-<table border="1" width="100" height="1000">
+<table  height="1000">
   <thead>
     <tr>
       <th scope="col">予想日時</th>
-      <th scope="col">&thinsp;ユーザー&emsp;&thinsp;ネーム</th>
-      <th scope="col">&emsp;試合</th>
+      <th scope="col">試合</th>
       <th scope="col">予想スコア</th>
       <th scope="col">結果スコア</th>
-      <th scope="col">&emsp;編集</th>
+      <th scope="col">編集</th>
     </tr>
   </thead>
   <tbody>
     <tr>
   <% @my_expects.each do |e| %>
-      <td> &ensp; <%=  l(e.created_at, format: :short)  %></td>
-      <td> &ensp; <%= e.user.name %></td>
-      <td>&thinsp;<%= e.game.team_a %>-<%= e.game.team_b %></td>
-      <td>&emsp;<%= e.home_score %>-<%= e.away_score %></td>
-      <td>&emsp;<%= e.game.result_home %>-<%= e.game.result_away %></td>
+      <td> <%=  l(e.created_at, format: :short)  %></td>
+      <td><%= e.game.team_a %>-<%= e.game.team_b %></td>
+      <td><%= e.home_score %>-<%= e.away_score %></td>
+      <td><%= e.game.result_home %>-<%= e.game.result_away %></td>
       <% if !e.game.match_time.nil? %>
       <td><%= link_to "編集",  edit_game_expect_path(e.game_id,id: e.id),class: 'cp_button09' %></td>
       <% else %>

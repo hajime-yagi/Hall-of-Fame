@@ -1,23 +1,23 @@
-<% content_for(:title, 'マイページ') %>
+<% content_for(:title, 'ユーザー詳細') %>
 <div class="container pt-3">
 <div class="row">
   <div class="col-md-10 offset-md-1">
-    <h1 class="mypage"><%= "マイページ" %></h1>
+    <h1 class="mypage"><%= "ユーザー詳細" %></h1>
        <table class="table text-center">
          <tr>
          <th scope="row"><%= "ユーザーネーム" %></th>
-           <td><%= current_user.name %></td>
+           <td><%= @user.name %></td>
          </tr>
         
          <tr>
          <th scope="row"><%= "球団" %></th>
-         <td><%= current_user.favorite_team_i18n %></td>
+         <td><%= @user.favorite_team_i18n %></td>
          </tr>
          <th scope="row"><%= "所持ポイント" %></th>
-         <td><%= current_user.point %></td>
+         <td><%= @user.point %></td>
          <tr>
           <th scope="row">アバター</th>
-          <% if current_user.avatar.present? %>
+          <% if @user.avatar.present? %>
           <td><%= image_tag current_user.avatar.url, class: 'rounded-circle mr15', width: '40px', height: '40px' %></td>
 
          <% else %>
@@ -27,7 +27,7 @@
         </tr>
          <tr>
          <th scope="row"><%= "一言" %></th>
-         <td><%=  current_user.introduction %></td>
+         <td><%=  @user.introduction %></td>
          </tr>
        </table>
        <% if @user.id == current_user.id %>
@@ -38,6 +38,7 @@
      </div>
      </div>
      </div>
-          
+     <div class="tate">
+     </div>
 
 
