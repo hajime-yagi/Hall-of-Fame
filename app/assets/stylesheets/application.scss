@@ -16,7 +16,7 @@
  @import 'toastr';
  @import "bootstrap-sprockets";
  @import "bootstrap";
-
+ @import "reset";
  
 
 * {
@@ -58,9 +58,9 @@ input {
   background-size: 100%;
 }
 .cp_fullscreenmenu .menu .menucont {
-  font-size: 54px;
+  font-size: 44px;
   position: relative;
-  top: 50%;
+  top: 45%;
   margin-top: -250px;
   padding-bottom: 20px;
   text-align: center;
@@ -338,14 +338,14 @@ body{
 }
 .home_score{
   position: absolute;
-  top: -40px;
+  top: 0px;
   left: -10px;
  
  
 }
 .away_score{
   position: absolute;
-  top: -40px;
+  top: -1px;
   left: 0px;
   
   
@@ -406,7 +406,7 @@ body{
 }
 .yosoubar {
   position: absolute;
-  left :32px;
+  left :19px;
   top :0px;
 }
 .cp_button09 {
@@ -585,7 +585,7 @@ a.cp_btn1:before {
 	top:100%;
 	left: 0;
 	border-radius: 3px;
-	background:#da274b;
+	background:#e4234c;
 	transition: .4s;
 }
 a.cp_btn1:hover:before {
@@ -1219,4 +1219,41 @@ a.btn-flat1:hover:before {
 a.btn-flat1:hover:after {
   -webkit-transform: rotate(45deg) translateX(0) translateY(50%);
   transform: rotate(45deg) translateX(0) translateY(50%);
+}
+a.cp_btn11 {
+  display: block;
+  position: relative;
+  width: 95px;
+  padding: 0.8em;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(226, 230, 49);
+  border:1px solid hsl(66, 61%, 46%);
+  background: #0a0004;
+  overflow: hidden;
+  z-index: 1 !important;
+}
+a.cp_btn11:after {
+  content:"";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  width: 100%;
+  background : #fff;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transition: 0.3s;
+  z-index: -1;
+}
+a.cp_btn11:hover {
+  color: #da3c41;
+}
+a.cp_btn11:hover:after {
+  height: 250%;
+  opacity: 1;
+}
+a.cp_btn11:active:after {
+  height: 350%;
+  opacity: 1;
 }

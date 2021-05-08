@@ -36,11 +36,11 @@ every :day, at: '23:00' do
 end
 
 
-every :day, at: '12:55' do
+every :day, at: '08:52' do
   rake "update_game:update_game_info"
 end
 
-work_hour_per_two = (9..22).select{ |_| _%1 == 0 }.map {|_| "#{_}:00" }
+work_hour_per_two = (9..22).select{ |_| _%1 == 0 }.map {|_| "#{_}:30" }
 every 1.day, at: work_hour_per_two do
   rake "update_game:update_game_scores"
 end 

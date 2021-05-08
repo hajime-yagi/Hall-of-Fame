@@ -1,6 +1,7 @@
  @import 'toastr';
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "reset";
  /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -58,7 +59,7 @@ input {
   background-size: 100%;
 }
 .cp_fullscreenmenu .menu .menucont {
-  font-size: 35px;
+  font-size: 25px;
   position: relative;
   top: 50%;
   margin-top: -200px;
@@ -208,18 +209,17 @@ header {
   top: 60px;
   left: 60px;
 }
+@media screen and (max-width: 640px) {
+
+  
 .header-menu1 {
-  position: absolute;
-  color: #fafafa;
-  top: 20px;
-  left: 10px;
+  display: none;
 }
 .header-menu2 {
-  position: absolute;
-  color: #e74d4d;
-  top: 100px;
-  left: 10px;
+  display: none;
 }
+}
+
 .header-menu3 {
   color: #e74d4d;
   position: absolute;
@@ -334,49 +334,57 @@ body{
 }
 .home_score{
   position: absolute;
-  top: 40px;
-  left: -400px;
+  top: 100px;
+  left: -430px;
   
  
 }
 .away_score{
   position: absolute;
-  top: 40px;
-  left: -370px;
-  
-  
+  top: 100px;
+  left: -450px;
+}
+  .home_score1{
+    position: absolute;
+    top: -250px;
+    left: -430px;
+  }
+  .away_score1{
+    position: absolute;
+    top: -250px;
+    left: -450px;
  
 }
 .home_team {
   position: absolute;
-  top: 280px;
-  left: 100px;
+  top: 230px;
+  left: 30px;
   font-size: 30px;
 }
 .away_team {
   position: absolute;
-  top: 280px;
-  left: 310px;
+  top: 230px;
+  left: 250px;
   font-size: 30px;
  
 }
 .bo- {
   position: absolute;
-  top: 280px;
-  left: 240px;
+  top: 260px;
+  left: 180px;
   font-size: 25px;
  
 }
 .time {
   position: absolute;
-  top: 320px;
-  left: 205px;
+  top: 300px;
+  left: 150px;
   font-size: 25px;
 }
 .yosou {
   position: absolute;
   top: 500px;
-  left: 210px;
+  left: 155px;
   font-size: 25px;
 }
 .pitcher {
@@ -388,19 +396,19 @@ body{
 }
 .average {
   position: absolute;
-  top: 370px;
-  left: 185px;
+  top: 390px;
+  left: 130px;
   font-size: 25px;
 
 }
 .yosoubar {
   position: absolute;
-  left :32px;
-  top :0px;
+  left :18px;
+  top :-2px;
 }
 .cp_button09 {
 	display: inline-block;
-	width: 80px;
+	width: 60px;
 	padding: 0.5em;
 	line-height: 1.4;
 	cursor: pointer;
@@ -461,8 +469,8 @@ body{
   position: relative;
   z-index: 1;
   display: inline-block;
-  width: 75px;
-  padding: 0.5em;
+  width: 70px;
+  padding: 0.3em;
   line-height: 1.4;
   cursor: pointer;
   user-select: none;
@@ -559,8 +567,8 @@ body{
 a.cp_btn1 {
 	position: relative;
 	display: block;
-	width: 40px;
-	padding: 0.3em;
+	width: 30px;
+	padding: 0em;
 	text-align: center;
 	font-weight: bold;
 	text-decoration: none;
@@ -612,24 +620,24 @@ a.cp_btn1:hover:before {
 }
 .team-rank {
   position: absolute;
-  top: 310px;
-  left: 20px;
+  top: 240px;
+  left: 10px;
  }
  .fan-rank {
   position: absolute;
-   top: 310px;
-   left:280px;
+   top: 240px;
+   left:200px;
  }
  
  .team-rank1 {
   position: absolute;
-  top: 350px;
-  left: 40px;
+  top: 260px;
+  left: 10px;
  }
  .fan-rank1 {
   position: absolute;
-   top: 350px;
-   left:250px;
+   top: 260px;
+   left:200px;
  }
  .rank {
    text-align: center;
@@ -1010,9 +1018,7 @@ tr {
 .margin {
   margin-bottom: 10%;
 }
-.table-condensed {
-  height: 1000px;
-}
+
  
 .table1 {
   margin-top:-565px;
@@ -1126,4 +1132,44 @@ table {
   
   .tate {
    margin-bottom: 300px;
+  }
+ 
+
+
+  a.cp_btn11 {
+    display: block;
+    position: relative;
+    width: 55px;
+    padding: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(226, 230, 49);
+    border:1px solid hsl(66, 61%, 46%);
+    background: #0a0004;
+    overflow: hidden;
+    z-index: 1 !important;
+  }
+  a.cp_btn11:after {
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0;
+    width: 100%;
+    background : #fff;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transition: 0.3s;
+    z-index: -1;
+  }
+  a.cp_btn11:hover {
+    color: #da3c41;
+  }
+  a.cp_btn11:hover:after {
+    height: 250%;
+    opacity: 1;
+  }
+  a.cp_btn11:active:after {
+    height: 350%;
+    opacity: 1;
   }

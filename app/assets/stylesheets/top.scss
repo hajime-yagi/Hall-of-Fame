@@ -1,19 +1,51 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "reset";
 
 
 div#contents{
   overflow:hidden;
 }
 
+@media only screen and (min-width:1600px) {
+  body{
+    background-color: #020202;
+    background-image: url(kaizen5.jpg);
+    background-blend-mode:lighten;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+  }
+  
+.login {
+  position: absolute;
+  left:700px;
+  top :300px;
+  font-family: serif;
+  color: #fff;
+}
+.signup{
+  text-align: center;
+ left: 690px;
+ top: 800px;
+}
+.topmypage{
+  position: absolute;
+  left: 1500px;
+  top: 800px;
+}
+
+  }
+
 body{
   background-color: #020202;
-  background-image: url(topayaya.jpg);
+  background-image: url(kaizen5.jpg);
   background-blend-mode:lighten;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
 }
 
   .bound-container{
@@ -23,7 +55,7 @@ body{
   }
   
   
-
+  
   .ball{
     position: absolute;
     left: 0;
@@ -48,134 +80,91 @@ body{
     60% {transform: scale(1);}
     90% {top: 0;transform: scale(1.15,0.9);}
   }
-
-  .login {
+  
+    .login {
     position: absolute;
-    left:1100px;
+    left: 1000px;
     top :380px;
     font-family: serif;
     color: #fff;
   }
-  .signup{
-    position: relative;
-   left: 420px;
-   top: 500px;
+ 
+  
+  .signup {
+    position: absolute;
+   left: 460px;
+   top: 550px;
   }
+
   .topmypage{
     position: absolute;
-    left: 1100px;
-    top: 500px;
+    left:1000px;
+    top: 550px;
   }
+
+
+//safari
+  ::-webkit-full-page-media, :future, :root  .login {
+      position: absolute;
+      left:1000px;
+      top :380px;
+      font-family: serif;
+      color: #fff;
+    }
+    ::-webkit-full-page-media, :future, :root .signup{
+      position: absolute;
+     left: 440px;
+     top: 550px;
+    }
+    ::-webkit-full-page-media, :future, :root .topmypage{
+      position: absolute;
+      left: 1000px;
+      top: 500px;
+    }
+  
+    @media only screen and (min-width:1800px) {
+      body{
+        background-color: #020202;
+        background-image: url(topayaya.jpg);
+        background-blend-mode:lighten;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: contain;
+      }
+      
+    .login {
+      position: absolute;
+      margin-left:500px;
+      margin-top :300px;
+      font-family: serif;
+      color: #fff;
+    }
+    .signup{
+      position: absolute;
+     left: 690px;
+     top: 800px;
+    }
+    .topmypage{
+      position: absolute;
+      left: 1500px;
+      top: 800px;
+    }
+  
+      }
 
 body {
   font-family: monospace;
+    margin: 0;
+    padding: 0;
 }
 
-.cp_button14 {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  width: 85px;
-  padding: 0.1em;
-  line-height: 1.4;
-  cursor: pointer;
-  user-select: none;
-  transition: transform 0.3s;
-  
-  border: 0;
-  background: #f532a4;
-}
-.cp_button14:before {
-  position: absolute;
-  z-index: -1;
-  top: 100%;
-  left: 5%;
-  width: 10%;
-  height: 10px;
-  content: '';
-  transition:transform 0.3s,opacity 0.3s;
-  pointer-events: none;
-  opacity: 0;
-  background: -webkit-radial-gradient(center, ellipse, rgba(46,125,50, 0.35) 0%, rgba(46,125,50, 0) 80%);
-  background: radial-gradient(ellipse at center, rgba(46,125,50, 0.35) 0%, rgba(46,125,50, 0) 80%);
-}
-.cp_button14:hover {
-  -webkit-transform: translateY(-6px);
-          transform: translateY(-6px);
-  -webkit-animation: button13 1.5s linear infinite alternate 0.3s;
-          animation: button13 1.5s linear infinite alternate 0.3s;
-  color: #2e7d32;
-}
-.cp_button14:hover:before {
-  -webkit-transform: translateY(6px);
-          transform: translateY(6px);
-  -webkit-animation: button13_shadow 1.5s linear infinite alternate 0.3s;
-          animation: button13_shadow 1.5s linear infinite alternate 0.3s;
-  opacity: 0.4;
-}
-.cp_button14:focus {
-  color: #2e7d32;
-}
-@-webkit-keyframes button14 {
-  50% {
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px);
-  }
-  100% {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
-  }
-}
-@keyframes button14 {
-  50% {
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px);
-  }
-  100% {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
-  }
-}
-@-webkit-keyframes button14_shadow {
-  0% {
-    -webkit-transform: translateY(6px);
-            transform: translateY(6px);
-    opacity: 0.4;
-  }
-  50% {
-    -webkit-transform: translateY(3px);
-            transform: translateY(3px);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(6px);
-            transform: translateY(6px);
-    opacity: 0.4;
-  }
-}
-@keyframes button14_shadow {
-  0% {
-    -webkit-transform: translateY(6px);
-            transform: translateY(6px);
-    opacity: 0.4;
-  }
-  50% {
-    -webkit-transform: translateY(3px);
-            transform: translateY(3px);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(6px);
-            transform: translateY(6px);
-    opacity: 0.4;
-  }
-}
 
 a.cp_btn {
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	color: #FF5722;
+	color: #fafafa;
 	width: 100px;
 	height: 100px;
 	line-height: 100px;

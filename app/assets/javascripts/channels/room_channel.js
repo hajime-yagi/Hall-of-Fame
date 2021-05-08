@@ -8,9 +8,8 @@ document.addEventListener('turbolinks:load', () => {
    if (messageContainer === null) {
        return
    }
-
-
-
+  
+ 
 App.room = App.cable.subscriptions.create("RoomChannel", {
    connected: function() {
      console.log('connected')
@@ -22,6 +21,7 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
    },
  
    received: function(data) {
+    console.log(data)
       messageContainer.insertAdjacentHTML('beforeend', data['message'])
    },
   
@@ -116,5 +116,15 @@ messageButton.addEventListener('click', () => {
      }
  }, {passive: true});
  
+
+ $(document).ready( function(){
+    if (window.name != "test") {
+        location.reload();
+        window.name = "test";
+    } else {
+        window.name = "";
+    }
+});
+
 
 })
