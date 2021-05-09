@@ -5,5 +5,5 @@ class GamesController < ApplicationController
   def index
   @expects = current_user.expects.today
   @games = Game.today
-end
+  end
 end

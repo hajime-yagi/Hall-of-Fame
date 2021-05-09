@@ -46,7 +46,7 @@ input {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(to top, rgba(143, 28, 57, 0.63) 0%, rgba(255,177,153,0.7) 100%);
+  background-image: linear-gradient(to top, rgba(32, 30, 30, 0.63) 0%, rgba(49, 46, 45, 0.7) 100%);
 }
 .cp_fullscreenmenu .menu label {
   position: absolute;
@@ -122,7 +122,7 @@ input {
   right: 0;
   content: '';
   transform: rotate(-45deg);
-  background-color: #f06161;
+  background-color: #4c4545;
 }
 .cp_fullscreenmenu #menuToggle:not(:checked) ~ .menuEffects ul {
   transform: translateY(-30%);
@@ -152,7 +152,7 @@ input {
   width: 24px;
   height: 4px;
   border-radius: 2px;
-  background-color: #cc4672;
+  background-color: #eb6290;
   transition: all 0.3s ease;
 }
 .cp_fullscreenmenu .open {
@@ -1012,7 +1012,7 @@ tr {
   width: 20%
 }
 .setumei {
-  margin-top: 10%;
+  margin-top: 5%;
   margin-bottom: 10%;
   text-align: center;
 }

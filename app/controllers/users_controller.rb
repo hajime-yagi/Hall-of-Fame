@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 class UsersController < ApplicationController
   skip_before_action :require_login, only: %i[new create]
@@ -15,7 +14,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to login_path, success: 'ユーザーを作成しました'
+      auto_login(@user)
+      redirect_to profile_path, success: 'ユーザーを作成しました'
     else
       render :new
       flash.now[:alert] = 'ユーザー作成に失敗しました'
