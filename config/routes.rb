@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   post 'contact/thanks' => 'contacts#thanks' 
   get 'contact/done'   => 'contacts#done'
   get '/room' => 'rooms#show'
+  get '/play' => 'plays#play'
+  get '/term' => 'terms#term'
+  get '/privacy' => 'terms#privacy'
   resources :users
   resource :profile, only: %i[show edit update]
   resources :games do

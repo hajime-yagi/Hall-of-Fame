@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag  'phone', media: '(min-width: 320px) and (max-width: 639px)', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="phone.scss" rel="stylesheet" type="text/scss" media="(min-width: 320px) and (max-width: 639px)" >
@@ -19,9 +20,9 @@
 <% else %>
   <%= render 'shared/before_login_header' %>
 <% end %>
-
+<div class="wf-sawarabimincho">
     <%= yield %>
- 
+ </div>
     <% if flash.any? %>
     <script type="text/javascript">
       <% flash.each do |key, value| %>
@@ -31,11 +32,7 @@
       <% end %>
     </script>
   <% end %>
-  <% if !current_page?(new_user_path) %>
-  <% if !current_page?(login_path) %>
     <%= render 'shared/footer' %>
-    <% end %>
-    <% end %>
   </body>
   
 </html>

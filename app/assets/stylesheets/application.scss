@@ -113,7 +113,7 @@ input {
   right: 0;
   content: '';
   transform: rotate(45deg);
-  background-color: #854b4b;
+  background-color: #e46363;
 }
 .cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open:after {
   position: relative;
@@ -122,7 +122,7 @@ input {
   right: 0;
   content: '';
   transform: rotate(-45deg);
-  background-color: #4c4545;
+  background-color: #ec62b3;
 }
 .cp_fullscreenmenu #menuToggle:not(:checked) ~ .menuEffects ul {
   transform: translateY(-30%);
@@ -1256,4 +1256,12 @@ a.cp_btn11:hover:after {
 a.cp_btn11:active:after {
   height: 350%;
   opacity: 1;
+}
+.check{
+  display: table;
+}
+.wf-sawarabimincho { font-family: "Sawarabi Mincho"; }
+
+.privacy {
+  margin-top: 5%;
 }

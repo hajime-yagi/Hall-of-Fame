@@ -6,7 +6,7 @@
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging,
 # :magic_login, :external
-Rails.application.config.sorcery.submodules = []
+Rails.application.config.sorcery.submodules = [:remember_me]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -545,7 +545,10 @@ Rails.application.config.sorcery.configure do |config|
     # Default: `:provider`
     #
     # user.provider_attribute_name =
-
+    config.user_config do |user|
+      user.remember_me_for = 1209600
+    end
+  
     # User's external unique identifier in the `authentications` class.
     # Default: `:uid`
     #
