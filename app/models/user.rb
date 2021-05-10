@@ -14,9 +14,7 @@ class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
   enum favorite_team: { giants: 0, tigers: 1, dragons: 2,
-                       baystars: 3, carp: 4, swallows: 5,
-                        hawks: 6, marines: 7,lions: 8, 
+                        baystars: 3, carp: 4, swallows: 5,
+                        hawks: 6, marines: 7, lions: 8,
                         orix: 9, fighters: 10, eagles: 11 }
-
-  
 end

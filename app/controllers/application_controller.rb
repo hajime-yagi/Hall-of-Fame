@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   before_action :set_request_variant
 
-   
   protected
 
   def not_authenticated
@@ -21,6 +20,5 @@ class ApplicationController < ActionController::Base
     when /Android/
       request.variant = :phone
     end
-end
-
+  end
 end

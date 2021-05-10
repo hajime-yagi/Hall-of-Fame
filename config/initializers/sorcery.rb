@@ -546,9 +546,9 @@ Rails.application.config.sorcery.configure do |config|
     #
     # user.provider_attribute_name =
     config.user_config do |user|
-      user.remember_me_for = 1209600
+      user.remember_me_for = 1_209_600
     end
-  
+
     # User's external unique identifier in the `authentications` class.
     # Default: `:uid`
     #

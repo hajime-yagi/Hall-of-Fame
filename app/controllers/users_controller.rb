@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   skip_before_action :require_login, only: %i[new create]
   def index
     @q = User.ransack(params[:q])
     @users = @q.result(distinct: true).page(params[:page])
   end
-
 
   def new
     @user = User.new
@@ -25,10 +26,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
- 
- 
-
   private
+
   def search_params
     params.require(:q).permit(:favorite_team_eq)
   end

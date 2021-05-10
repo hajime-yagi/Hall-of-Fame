@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :update_game do
   desc '定期的に試合情報を更新する'
   task update_game_scores: :environment do
@@ -148,7 +150,7 @@ namespace :update_game do
     @pitcher11.nil? || @pitcher11 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/ul[1]/li').inner_text
     @pitcher12 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/ul[2]/li')
     @pitcher12.nil? || @pitcher12 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/ul[2]/li').inner_text
-  
+
     @games = Game.today[0]
     @games.match_time = @time1
     @games.result_home = @score1
@@ -204,5 +206,5 @@ namespace :update_game do
     @games.pitcher_b = @pitcher12
     @games.save
   end
-  puts "今日のスコア更新したよ〜"
+  puts '今日のスコア更新したよ〜'
 end

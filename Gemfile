@@ -36,21 +36,23 @@ gem 'sorcery'
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass', '>= 3.4.1'
 gem 'carrierwave'
+gem 'enum_help'
+gem 'faker'
+gem 'high_voltage'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'kaminari', '1.1.1'
 gem 'mechanize'
 gem 'mini_magick'
 gem 'rails-i18n'
+gem 'ransack'
 gem 'toastr-rails'
 gem 'whenever', require: false
-gem 'enum_help'
-gem 'ransack'
-gem 'kaminari', '1.1.1'
-gem 'faker'
-gem 'high_voltage'
-gem "dotenv-rails"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+
+gem 'dotenv-rails', groups: [:development, :production]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

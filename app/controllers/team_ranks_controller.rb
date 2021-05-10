@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TeamRanksController < ApplicationController
   def index
     @giants = User.giants.all.sum(:point)
