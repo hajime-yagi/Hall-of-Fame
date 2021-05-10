@@ -1,16 +1,14 @@
 <header>
-    <div class="bar">
-      <%= link_to image_tag("logo4.jpg", class:"logo_image"), root_path %>
-			</div>
-  </header>
-	
-	<div class="header-menu1">
-  <%= link_to '試合一覧' ,games_path %>
-	</div>
-	<div class="header-menu2">
-  <%= link_to 'ユーザー一覧',users_path %>
-	</div>
-	
+<div class="bar">
+<%= link_to image_tag("logo4.jpg", class:"logo_image"), root_path %>
+</div>
+<div class="header-menu1">
+<%= link_to '試合一覧' ,games_path, class: "cp_btn1" %>
+</div>
+<div class="header-menu2">
+<%= link_to '順位',rank_path, class: "cp_btn1" %>
+</div>
+
 <div class="cp_fullscreenmenu">
 <input type="checkbox" id="menuToggle" />
 
@@ -21,12 +19,17 @@
 <div class="menu menuEffects">
 <label for="menuToggle"></label>
 <div class="menucont">
-	<ul>
-		<li><%= link_to 'みんなの予想',expects_path %></li>
-		<li><%= link_to 'ランキング' ,rank_path %></li>
-		<li><%= link_to 'マイページ',profile_path %></li>
-		<li><%= link_to 'ログアウト', logout_path,  method: :delete %></li>
-	</ul>
+<ul>
+  <li><%= link_to '試合一覧',games_path %></li>
+  <li><%= link_to '順位',rank_path %></li>
+	<li><%= link_to 'ミーティングルーム',room_path %></li>
+	<li><%= link_to '予想一覧',expects_path %></li>
+	<li><%= link_to 'ユーザー一覧' ,users_path %></li>
+	<li><%= link_to 'マイページ',profile_path %></li>
+	<li><%= link_to 'ログアウト', logout_path,  method: :delete %></li>
+</ul>
 </div>
 </div>
 </div>
+  </header>
+	

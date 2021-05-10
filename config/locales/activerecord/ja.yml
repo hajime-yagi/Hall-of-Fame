@@ -8,6 +8,12 @@ ja:
         password:  パスワード
         name: 名前
         password_confirmation: パスワード確認
+      contact:
+        email:  メールアドレス
+        name: 名前
+        subject: 用件
+        message: お問い合わせ内容
+      
   enums:
      user:
        favorite_team:

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Use this file to easily define all of your cron jobs.
 #
 # It's helpful, but not entirely necessary to understand cron before proceeding.
@@ -16,7 +18,7 @@
 # every 4.days do
 #   runner "AnotherModel.prune_old_records"
 # end
-require File.expand_path(File.dirname(__FILE__) + "/environment")
+require File.expand_path("#{File.dirname(__FILE__)}/environment")
 
 rails_env = ENV['RAILS_ENV'] || :development
 
@@ -24,18 +26,22 @@ set :environment, rails_env
 
 set :output, "#{Rails.root}/log/cron.log"
 
-job_type :rake, "export PATH=\"$HOME/.rbenv/bin:$PATH\"; eval \"$(rbenv init -)\"; cd :path && RAILS_ENV=:environment bundle exec rake :task :output"
-
-every :day, at: '09:30' do
-  rake "update_game:update_game_info"
-end
+job_type :rake,
+         'export PATH="$HOME/.rbenv/bin:$PATH"; eval "$(rbenv init -)"; cd :path && RAILS_ENV=:environment bundle exec rake :task :output'
 
 every :day, at: '22:50' do
-  rake "update_game:update_game_scores"
+  rake 'update_game:update_game_scores'
 end
 
 every :day, at: '23:00' do
-  rake "check_expect:check_expect_score"
+  rake 'check_expect:check_expect_score'
 end
 
+every :day, at: '08:52' do
+  rake 'update_game:update_game_info'
+end
 
+work_hour_per_two = (9..22).select { |_| (_ % 1).zero? }.map { |_| "#{_}:30" }
+every 1.day, at: work_hour_per_two do
+  rake 'update_game:update_game_scores'
+end

@@ -1,14 +1,16 @@
-<font color="black">
-<div class="text-center" >
-<h1>予想一覧</h1>
+<% content_for(:title, '予想一覧') %>
+<div class="rank" >
+<h1>試合予想一覧</h1>
 </div>
-<table class="table table-condensed">
+<%= render 'search' %>
+<table class="table hight="300">
   <thead>
     <tr>
       <th scope="col">球団</th>
-      <th scope="col">ユーザーネーム</th>
+      <th scope="col">名前</th>
       <th scope="col">試合</th>
       <th scope="col">予想スコア</th>
+      <th scope="col">予想日時</th>
     </tr>
   </thead>
   <tbody>
@@ -18,10 +20,16 @@
       <td><%= e.user.name %></td>
       <td><%= e.game.team_a %>-<%= e.game.team_b %></td>
       <td><%= e.home_score %>-<%= e.away_score %></td>
-      <td><%= l(e.created_at, format: :long)%></td>
+      <td><%= l(e.created_at, format: :short)%></td>
      </tr>
      <% end %>
     
   </tbody>
+  <div class="pagenate">
+  <%= paginate @expects %>
 </table>
-</font>
+<%= paginate @expects %>
+</div>
+<div class="tate" >
+
+</div>

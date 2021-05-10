@@ -14,8 +14,21 @@ RSpec.describe 'Expects', type: :system do
       it '予想登録できる' do
         visit games_path
         click_on '予想する', match: :first
-        expect(page).to have_content '予想登録ページ'
-        expect(current_path).to eq new_game_expect_path
+        click_on '予想'
+        expect(page).to have_content 'マイページ'
+        expect(current_path).to eq profile_path
+      end
+    end
+    context 'エラー' do
+      it '予想登録できない' do
+        visit games_path
+        click_on '予想する', match: :first
+        click_on '予想'
+        visit games_path
+        click_on '予想する', match: :first
+        expect(page).to have_content '予想一覧'
+        expect(page).to have_content '予想済みです'
+        expect(current_path).to eq games_path
       end
     end
   end

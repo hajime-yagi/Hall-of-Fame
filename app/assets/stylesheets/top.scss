@@ -1,19 +1,53 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "reset";
 
 
+div#contents{
+  overflow:hidden;
+}
 
+@media only screen and (min-width:1600px) {
+  body{
+    background-color: #020202;
+    background-image: url(kaizen5.jpg);
+    background-blend-mode:lighten;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+  }
+  
+.login {
+  position: absolute;
+  left:700px;
+  top :300px;
+  font-family: serif;
+  color: #fff;
+}
+.signup{
+  text-align: center;
+ left: 690px;
+ top: 800px;
+}
+.topmypage{
+  position: absolute;
+  left: 1500px;
+  top: 800px;
+}
+
+  }
 
 body{
-  background-color: #000003;
-  background-image: url(top.jpg);
+  background-color: #020202;
+  background-image: url(kaizen5.jpg);
   background-blend-mode:lighten;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 100%;
   background-attachment: fixed;
-  
-  
+  background-size: cover;
+}
+
   .bound-container{
     position:relative;
     width:100%;
@@ -21,7 +55,7 @@ body{
   }
   
   
-
+  
   .ball{
     position: absolute;
     left: 0;
@@ -46,121 +80,91 @@ body{
     60% {transform: scale(1);}
     90% {top: 0;transform: scale(1.15,0.9);}
   }
-}
-.hoge {
-  margin-left: 1000px;
-  margin-top: 100px;
+  
+    .login {
+    position: absolute;
+    left: 1000px;
+    top :370px;
+    font-family: serif;
+    color: #fff;
+  }
+ 
+  
+  .signup {
+    position: absolute;
+   left: 460px;
+   top: 500px;
+  }
 
-}
+  .topmypage{
+    position: absolute;
+    left:1000px;
+    top: 520px;
+  }
+
+
+//safari
+  ::-webkit-full-page-media, :future, :root  .login {
+      position: absolute;
+      left:1000px;
+      top :380px;
+      font-family: serif;
+      color: #fff;
+    }
+    ::-webkit-full-page-media, :future, :root .signup{
+      position: absolute;
+     left: 440px;
+     top: 550px;
+    }
+    ::-webkit-full-page-media, :future, :root .topmypage{
+      position: absolute;
+      left: 1000px;
+      top: 500px;
+    }
+  
+    @media only screen and (min-width:1800px) {
+      body{
+        background-color: #020202;
+        background-image: url(topayaya.jpg);
+        background-blend-mode:lighten;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: contain;
+      }
+      
+    .login {
+      position: absolute;
+      margin-left:500px;
+      margin-top :300px;
+      font-family: serif;
+      color: #fff;
+    }
+    .signup{
+      position: absolute;
+     left: 690px;
+     top: 800px;
+    }
+    .topmypage{
+      position: absolute;
+      left: 1500px;
+      top: 800px;
+    }
+  
+      }
+
 body {
   font-family: monospace;
+    margin: 0;
+    padding: 0;
 }
 
-.cp_button14 {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  width: 160px;
-  padding: 1em;
-  line-height: 1.4;
-  cursor: pointer;
-  user-select: none;
-  transition: transform 0.3s;
-  
-  border: 0;
-  background: #7e7ed1;
-}
-.cp_button14:before {
-  position: absolute;
-  z-index: -1;
-  top: 100%;
-  left: 5%;
-  width: 10%;
-  height: 10px;
-  content: '';
-  transition:transform 0.3s,opacity 0.3s;
-  pointer-events: none;
-  opacity: 0;
-  background: -webkit-radial-gradient(center, ellipse, rgba(46,125,50, 0.35) 0%, rgba(46,125,50, 0) 80%);
-  background: radial-gradient(ellipse at center, rgba(46,125,50, 0.35) 0%, rgba(46,125,50, 0) 80%);
-}
-.cp_button14:hover {
-  -webkit-transform: translateY(-6px);
-          transform: translateY(-6px);
-  -webkit-animation: button13 1.5s linear infinite alternate 0.3s;
-          animation: button13 1.5s linear infinite alternate 0.3s;
-  color: #2e7d32;
-}
-.cp_button14:hover:before {
-  -webkit-transform: translateY(6px);
-          transform: translateY(6px);
-  -webkit-animation: button13_shadow 1.5s linear infinite alternate 0.3s;
-          animation: button13_shadow 1.5s linear infinite alternate 0.3s;
-  opacity: 0.4;
-}
-.cp_button14:focus {
-  color: #2e7d32;
-}
-@-webkit-keyframes button14 {
-  50% {
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px);
-  }
-  100% {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
-  }
-}
-@keyframes button14 {
-  50% {
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px);
-  }
-  100% {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
-  }
-}
-@-webkit-keyframes button14_shadow {
-  0% {
-    -webkit-transform: translateY(6px);
-            transform: translateY(6px);
-    opacity: 0.4;
-  }
-  50% {
-    -webkit-transform: translateY(3px);
-            transform: translateY(3px);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(6px);
-            transform: translateY(6px);
-    opacity: 0.4;
-  }
-}
-@keyframes button14_shadow {
-  0% {
-    -webkit-transform: translateY(6px);
-            transform: translateY(6px);
-    opacity: 0.4;
-  }
-  50% {
-    -webkit-transform: translateY(3px);
-            transform: translateY(3px);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(6px);
-            transform: translateY(6px);
-    opacity: 0.4;
-  }
-}
 
 a.cp_btn {
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	color: #FF5722;
+	color: #fafafa;
 	width: 100px;
 	height: 100px;
 	line-height: 100px;
@@ -171,4 +175,132 @@ a.cp_btn {
 }
 a.cp_btn:hover {
 	transform: rotateY(360deg);
+}
+.cp_button15 {
+position: relative;
+width: 100%;
+padding-top: 25.92%;
+display: block;
+background-size: 100% 100%;
+font-family: 'luckiest guy';
+font-size: 28px;
+margin-bottom: 20px;
+text-decoration: none;
+color: #333;
+}
+ 
+
+.cp_button15.background-button {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/323909/yellow-shadow.png);
+
+  &:after {
+    content: attr(title);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/323909/yellow-top.png);
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover:after {
+    -webkit-transform: translate(2.5%, 10%);
+    transform: translate(2.5%, 10%);
+    text-shadow: 2px 2px 1px white;
+    color: black;
+  }
+}
+
+.button-wrapper {
+  width: 356px;
+  display: inline-block;
+  margin: 20px;
+  &:nth-child(2) {
+    -webkit-filter: hue-rotate(288deg);
+    filter: hue-rotate(288deg);
+  }
+}
+
+#footer li span img.profix {
+  float: left;
+  width: 80px;
+  border-radius: 100%;
+  margin-right: 13px;
+}
+#footer {
+  font-family: arial;
+  font-size: 12px;
+  width: 100%;
+  position: absolute;
+  border-top:1px solid rgba(255,255,255,0.2);
+  margin-bottom:0px; left:0;
+  box-shadow: 1px 1px 50px #000;
+  background-color: #000003;
+  height: 30px;
+}
+#footer ul {
+  float: left;
+  list-style: none;
+  padding: 4px;
+}
+#footer ul li {
+  float: left;
+  list-style: none;
+}
+
+#footer ul li span {
+  position: absolute;
+  display: none;
+  width: 350px;
+  color:#fff;
+  text-shadow: 0 0 1px #000;
+  border-radius: 8px 8px 0 0;
+  padding: 8px;
+  float: left;
+  bottom: 30px;
+  overflow: auto;
+  z-index: -1;
+}
+
+#footer ul li a {
+  color: #e97492;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+}
+#footer ul li a:hover {
+  color: rgb(243, 243, 85);  
+}
+#footer li a.show-content:hover span {
+  display: block;
+}
+#footer span.single-col{
+  width: 180px;
+}
+#footer span.double-col{
+  width: 280px;
+}
+
+#footer span h1{
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+#footer span form#contactform{
+  width: 180px;
+  margin-bottom: 12px;
+}
+#footer span form#contactform input, #footer textarea{
+  width: 97%;
+  padding: 2px 0 2px 2px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  background-color: #e7e7e1;
+}
+.footposition {
+  margin-bottom: 30%;
 }

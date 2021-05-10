@@ -1,11 +1,12 @@
- <font color="black">
- <div class="team-rank">
-  <%= link_to '球団別ポイント表',team_rank_path,class: "cp_button13" %>
-  </div>
-  <div class="rank" >
+<% content_for(:title, 'ランキング') %>
+<div class="rank">
   <h1>ランキング</h1>
-  </div>
-  <table class="table table-condensed"> 
+</div>
+<font color="white">
+  <%= link_to '球団ポイント表',team_rank_path,class: "btn btn-flat1 team-rank"  %>
+  <%= link_to '球団内順位',fan_rank_path,class: "btn btn-flat fan-rank" %>
+  </font>
+  <table class="table-condensed">
       <thead>
       <tr>
       <th scope="col">順位</th>
@@ -27,4 +28,5 @@
         </thead>
      </tbody>
     </table>
-  </font>
+    <div class="rank">
+    </div>

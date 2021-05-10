@@ -1,16 +1,44 @@
+<% content_for(:title, 'ユーザー詳細') %>
+<div class="container pt-3">
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <h1 class="mypage"><%= "ユーザー詳細" %></h1>
+       <table class="table text-center">
+         <tr>
+         <th scope="row"><%= "ユーザーネーム" %></th>
+           <td><%= @user.name %></td>
+         </tr>
+        
+         <tr>
+         <th scope="row"><%= "球団" %></th>
+         <td><%= @user.favorite_team_i18n %></td>
+         </tr>
+         <th scope="row"><%= "所持ポイント" %></th>
+         <td><%= @user.point %></td>
+         <tr>
+          <th scope="row">アバター</th>
+          <% if @user.avatar.present? %>
+          <td><%= image_tag @user.avatar.url, class: 'rounded-circle mr15', width: '40px', height: '40px' %></td>
 
-<p>
-<strong>ユーザーネーム:</strong>
-<%= @user.name %>
-</p>
+         <% else %>
+            <td><%= image_tag 'player.jpg', class: 'rounded-circle mr15', width: '40px', height: '40px' %></td>
+         <% end %>
 
-<p>
-<strong>Email:</strong>
-<%= @user.email %>
-</p>
+        </tr>
+         <tr>
+         <th scope="row"><%= "一言" %></th>
+         <td><%=  @user.introduction %></td>
+         </tr>
+       </table>
+       <% if @user.id == current_user.id %>
+       <%= link_to 'Edit', edit_profile_path(@user) %> |
+       <% end %>
+       <%= link_to 'Back', users_path %>
+       </div>
+     </div>
+     </div>
+     </div>
+     <div class="tate">
+     </div>
 
 
-<% if @user.id == current_user.id %>
-<%= link_to 'Edit', edit_profile_path(@user) %> |
-<% end %>
-<%= link_to 'Back', users_path %>

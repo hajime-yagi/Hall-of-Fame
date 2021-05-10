@@ -30,15 +30,16 @@ module HallOfFame
     # the framework and any gems in your application.
     config.i18n.default_locale = :ja
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
-    config.time_zone = "Tokyo"
+    config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
     # Don't generate system test files.
     config.generators.system_tests = nil
     config.generators do |g|
-      g.skip_routes true
-      g.assets false
+      g.skip_routes false
+      g.assets true
       g.helper false
       g.test_framework false
+      g.javascripts true
     end
   end
 end

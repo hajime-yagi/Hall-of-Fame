@@ -1,19 +1,27 @@
 <% content_for(:title, '球団別ポイント表') %>
-<h1 class="text-center"><%= "球団別ポイント表" %></h1>
-<div class="container pt-2">
-    <table border="10" width="1100" height="300">
-       <h2> セリーグ </h2>
+<div class="rank">
+<h1><%= "球団別ポイント表" %></h1>
+</div>
+<font color="white">
+<%= link_to '球団内順位', fan_rank_path, class: "btn btn-flat team-rank" %>
+<%= link_to '個人順位', rank_path, class: "btn btn-flat1 fan-rank"%>
+</font>
+    <table border="3" width="100" height="500">
+    <h2 class="central"> セリーグ </h2>
          <tr>
         <th><div class="t1 text-center"><font color ="#F97709">読売ジャイアンツ</font></div></th>
            <td><div class="t1 text-center"><font color ="#F97709"><%= @giants %>p</font></td>
         </div>
-       
+       </tr>
+       <tr>
          <th><div class="t1 text-center"><font color ="#ffe201">阪神タイガース</div></th></font>
          <td><div class="t1 text-center"><font color ="#ffe201"><%= @tigers %>p</font></div></td>
          </tr>
         <tr>
          <th><div class="t2 text-center"><font color ="#FFFFFF">中日ドラゴンズ</font></div></th>
          <td><div class="t2 text-center"><font color ="#FFFFFF"><%= @dragons %>p</div></td>
+         </tr>
+       <tr>
          <th><div class="t5 text-center"><font color ="ED1A3D">ヤクルトスワローズ</font></th>
          <td><div class="t5 text-center"><font color ="#ED1A3D"><%= @swallows %>p</font></td>
          </tr>
@@ -22,34 +30,41 @@
         <tr>
          <th><div class="t4 text-center"><font color ="#FFFFFF"><%= "広島カープ" %></font></th>
          <td><div class="t4 text-center"><font color ="#FFFFFF"><%= @carp %>p</div></font></td>
-       
-        
+         </tr>
+         <tr>
          <th><div class="t3 text-center"><font color ="#FFFFFF"><%= "DeNAベイスターズ" %></font></div></th>
          <td><div class="t3 text-center"><font color ="#FFFFFF"><%= @baystars %>p</td></div>
        </tr>
+       </table>
          </div>
-         <table border="10" width="1100" height="300">
-         <h2> パリーグ </h2>
+
+         <table border="3" width="100" height="500" >
+         <h2 class="pacific"> パリーグ </h2>
          <tr>
          <th><div class="t1 text-center"><font color ="#f9ca00">ソフトバンクホークス</font></div></th>
            <td><div class="t1 text-center"><font color ="#f9ca00"><%= @hawks %>p</font></div></td>
-         
+           </tr>
+           <tr>
          <th><div class="t1 text-center"><font color ="#FFFFFF">千葉ロッテマリーンズ</font></th>
          <td><div class="t1 text-center"><font color ="#FFFFFF"><%= @marines %>p</font></td>
          </tr>
          <tr>
          <th><div class="t7 text-center"><font color ="#FFFFFF">西武ライオンズ</font></th>
          <td><div class="t7 text-center"><font color ="#FFFFFF"><%= @lions %>p</font></td>
-         
+         </tr>
+       <tr>
          <th><div class="t1 text-center"><font color ="#b08f32">オリックスバッファローズ</font></div></th>
          <td><div class="t1 text-center"><font color ="#b08f32"><%= @orix %>p</font></td>
          </tr>
          <tr>
          <th><div class="t9 text-center"><font color ="#e1a823">日本ハムファイターズ</font></th>
          <td><div class="t9 text-center"><font color ="#e1a823"><%= @fighters %>p</font></td>
-        
+         </tr>
+         <tr>
          <th><div class="t8 text-center"><font color ="#FFFFFF">楽天ゴールデンイーグルス</font></div></th>
          <td><div class="t8 text-center"><font color ="#FFFFFF"><%= @eagles %>p</font></div></td>
          </tr>
          </div>
          </table>
+         <div class="rank">
+         </div>

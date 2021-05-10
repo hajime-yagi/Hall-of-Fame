@@ -1,0 +1,10 @@
+<%= search_form_for(@q) do |f| %>
+  <div class="cp_ipselect2 cp_sl03" %>
+  <div class='input-group mb-3'>
+  <%= f.select :favorite_team_eq,  options_for_select({'読売ジャイアンツ': 0, '阪神タイガース': 1, '中日ドラゴンズ': 2,'DeNAベイスターズ': 3, '広島カープ': 4, 'ヤクルトスワローズ': 5,'ソフトバンクホークス': 6, '千葉ロッテマリーンズ': 7,'西武ライオンズ': 8, 'オリックスバッファローズ': 9, '日本ハムファイターズ': 10, '楽天ゴールデンイーグルス': 11}),include_blank: '球団検索' %>
+  </div>
+  </div>
+    <div class='search'>
+    <%= f.submit value: "検索", class: "cp_button13" %>
+  </div>
+  <% end %>

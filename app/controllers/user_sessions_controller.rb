@@ -5,7 +5,7 @@ class UserSessionsController < ApplicationController
   def new; end
 
   def create
-    @user = login(params[:email], params[:password])
+    @user = login(params[:email], params[:password], params[:remember])
     if @user
       flash[:success] = 'ログインしました'
       redirect_to profile_path(@user)

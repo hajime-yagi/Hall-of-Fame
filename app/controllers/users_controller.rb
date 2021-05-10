@@ -3,7 +3,8 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only: %i[new create]
   def index
-    @users = User.all
+    @q = User.ransack(params[:q])
+    @users = @q.result(distinct: true).page(params[:page])
   end
 
   def new
@@ -13,7 +14,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to login_path, success: 'ユーザーを作成しました'
+      auto_login(@user)
+      redirect_to profile_path, success: 'ユーザーを作成しました'
     else
       render :new
       flash.now[:alert] = 'ユーザー作成に失敗しました'
@@ -25,6 +27,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def search_params
+    params.require(:q).permit(:favorite_team_eq)
+  end
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)

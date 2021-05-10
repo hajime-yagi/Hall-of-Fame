@@ -1,12 +1,12 @@
 <% content_for(:title, 'ユーザー一覧') %>
-<div class="text-center" >
+<div class="ichiran" >
 <h1>ユーザー一覧</h1>
 </div>
+<%= render 'search' %>
+<div class="margin">
 <table class="table table-condensed"> 
     <thead>
     <tr>
-    
-    
     <th scope="col">ユーザーネーム</th>
     <th scope="col">球団</th>
     <th scope="col">一言</th>
@@ -30,5 +30,9 @@
       </tr>
     <% end %>
   </tbody>
+  <div class="pagenate">
+  <%= paginate @users %>
 </table>
-
+<%= paginate @users %>
+</div>
+</div>
