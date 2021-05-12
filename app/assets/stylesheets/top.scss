@@ -10,7 +10,7 @@ div#contents{
 @media only screen and (min-width:1600px) {
   body{
     background-color: #020202;
-    background-image: url(kaizen5.jpg);
+    background-image: image-url("kaizen5.jpg");
     background-blend-mode:lighten;
     background-position: center center;
     background-repeat: no-repeat;
@@ -40,7 +40,7 @@ div#contents{
 
 body{
   background-color: #020202;
-  background-image: url(kaizen5.jpg);
+  background-image: image-url("kaizen5.jpg");
   background-blend-mode:lighten;
   background-position: center center;
   background-repeat: no-repeat;
@@ -125,7 +125,7 @@ body{
     @media only screen and (min-width:1800px) {
       body{
         background-color: #020202;
-        background-image: url(topayaya.jpg);
+        background-image: image-url("kaizen5.jpg");
         background-blend-mode:lighten;
         background-position: center center;
         background-repeat: no-repeat;
