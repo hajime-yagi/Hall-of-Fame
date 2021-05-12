@@ -65,7 +65,9 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'selenium-webdriver'
 end
-
+group :production, :staging do
+  gem 'unicorn'
+end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'better_errors'
