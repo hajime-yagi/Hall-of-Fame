@@ -10,13 +10,14 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require_self
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
 //= require jquery
 //= require bootstrap-sprockets
 //= require toastr
+//= require_tree .
 $(window).scroll(function() {
   if ($(document).scrollTop() > 150) {
     $('header').addClass('shrink');
