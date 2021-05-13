@@ -8,7 +8,7 @@ div#contents{
 
 body{
   background-color: #000003;
-  background-image: url(kaizen4.jpg);
+  background-image: image-url("kaizen4.jpg");
   background-blend-mode:lighten;
   background-position: center center;
   background-repeat: no-repeat;
@@ -51,7 +51,7 @@ body{
     width:100px;
     height:100px;
     border-radius: 50%;
-    background-image: url(ball.jpg);
+    background-image: image-url("ball.jpg");
     background-size: 200px;
     background-position: center; 
   
