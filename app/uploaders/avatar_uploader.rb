@@ -35,7 +35,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # end
   if Rails.env.production?
     storage :fog
-  else
+  else  
     storage :file
   end
   # Add an allowlist of extensions which are allowed to be uploaded.
