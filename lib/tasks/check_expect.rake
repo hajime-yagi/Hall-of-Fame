@@ -16,6 +16,7 @@ namespace :check_expect do
       elsif e.home_score > e.away_score && e.game.result_home ||= 40 > e.game.result_away||= 40
         e.user.point += 10
         e.user.save
+
       elsif e.home_score < e.away_score && e.game.result_home ||= 40 < e.game.result_away ||= 40
         e.user.point += 10
         e.user.save
