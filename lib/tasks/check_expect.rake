@@ -12,17 +12,21 @@ namespace :check_expect do
       elsif e.home_score == e.game.result_home || e.away_score == e.game.result_away
         e.user.point += 20
         e.user.save
-        
-      elsif e.home_score > e.away_score && e.game.result_home ||= 40 > e.game.result_away||= 40
-        e.user.point += 10
+
+      elsif e.game.result_home.nil?
+        e.user.point += 0
         e.user.save
 
-      elsif e.home_score < e.away_score && e.game.result_home ||= 40 < e.game.result_away ||= 40
+
+      elsif e.home_score > e.away_score && e.game.result_home > e.game.result_away
+
+        e.user.point += 10
+        e.user.save
+      elsif e.home_score < e.away_score && e.game.result_home < e.game.result_away
         e.user.point += 10
         e.user.save
       end
     end
-    
     puts '付与したよ〜'
   end
 end
