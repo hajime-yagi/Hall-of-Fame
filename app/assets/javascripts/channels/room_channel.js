@@ -8,6 +8,9 @@ document.addEventListener('turbolinks:load', () => {
    if (messageContainer === null) {
        return
    }
+   $(document).on("turbolinks:request-start", function() {
+    App.room.unsubscribe();
+    });
   
  
 App.room = App.cable.subscriptions.create("RoomChannel", {
@@ -117,14 +120,6 @@ messageButton.addEventListener('click', () => {
  }, {passive: true});
  
 
- $(document).ready( function(){
-    if (window.name != "test") {
-        location.reload();
-        window.name = "test";
-    } else {
-        window.name = "";
-    }
-});
-
+ 
 
 })

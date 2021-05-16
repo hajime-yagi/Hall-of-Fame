@@ -49,7 +49,7 @@ Rails.application.configure do
   
   ActionCable.server.config.disable_request_forgery_protection = true
   config.action_cable.url = 'ws://35.73.252.150/cable'
-  config.action_cable.allowed_request_origins = [ 'http://35.73.252.150' ]
+  config.action_cable.allowed_request_origins = [ 'http://fan-pennantrace.com' ]
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
@@ -65,7 +65,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "Hall-of-Fame_#{Rails.env}"
+   config.active_job.queue_name_prefix = "Hall-of-Fame_#{Rails.env}"
   config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.delivery_method = :smtp
