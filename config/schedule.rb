@@ -29,15 +29,15 @@ set :output, "#{Rails.root}/log/cron.log"
 job_type :rake,
          'export PATH="$HOME/.rbenv/bin:$PATH"; eval "$(rbenv init -)"; cd :path && RAILS_ENV=:environment bundle exec rake :task :output'
 
-every :day, at: '22:50' do
+every 1.day, at: "22:50" do
   rake 'update_game:update_game_scores'
 end
 
-every :day, at: '23:00' do
+every 1.day, at: "23:00" do
   rake 'check_expect:check_expect_score'
 end
 
-every :day, at: '08:00' do
+every 1.day, at: "08:00" do
   rake 'update_game:update_game_info'
 end
 
