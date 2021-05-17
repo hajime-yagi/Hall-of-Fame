@@ -1,6 +1,7 @@
 
 document.addEventListener('turbolinks:load', () => {
 
+ 
    // js.erb 内で使用できるように変数を定義しておく
    window.messageContainer = document.getElementById('message-container')
 
@@ -11,8 +12,26 @@ document.addEventListener('turbolinks:load', () => {
    $(document).on("turbolinks:request-start", function() {
     App.room.unsubscribe();
     });
-  
+
+    // reloadの応用方法
+// キャッシュを利用してリロードする方法
+function doReloadWithCache() {
  
+    // キャッシュを利用してリロード
+    window.location.reload(true);
+ 
+}
+ 
+window.addEventListener('load', function () {
+ 
+    // ページ表示完了した5秒後にリロード
+    setTimeout(doReloadWithCache, 30000);
+ 
+});
+    
+
+
+  
 App.room = App.cable.subscriptions.create("RoomChannel", {
    connected: function() {
      console.log('connected')
@@ -29,6 +48,8 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
    },
   
  });
+ 
+
  
  document.addEventListener('DOMContentLoaded', function(){
    const input = document.getElementById('chat-input')
@@ -120,6 +141,5 @@ messageButton.addEventListener('click', () => {
  }, {passive: true});
  
 
- 
 
 })
