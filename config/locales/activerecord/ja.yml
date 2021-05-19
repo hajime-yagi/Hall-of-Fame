@@ -6,7 +6,7 @@ ja:
       user:
         email:  メールアドレス
         password:  パスワード
-        name: 名前
+        name: ユーザーネーム
         password_confirmation: パスワード確認
       contact:
         email:  メールアドレス
