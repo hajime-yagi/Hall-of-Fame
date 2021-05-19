@@ -214,13 +214,13 @@ header {
 }
 .header-menu1 {
   position: absolute;
-  color: #e74d4d;
+  color: #f08383;
   top: 60px;
   left: 50px;
 }
 .header-menu2 {
   position: absolute;
-  color: #e74d4d;
+  color: #f07474;
   top: 60px;
   left: 250px;
 }
@@ -590,7 +590,7 @@ a.cp_btn1 {
 	text-align: center;
 	font-weight: bold;
 	text-decoration: none;
-	color: rgb(224, 13, 13);
+	color: rgb(240, 116, 168);
 }
 a.cp_btn1:before {
 	position: absolute;
@@ -600,7 +600,7 @@ a.cp_btn1:before {
 	top:100%;
 	left: 0;
 	border-radius: 3px;
-	background:#e4234c;
+	background:#f04d91;
 	transition: .4s;
 }
 a.cp_btn1:hover:before {
@@ -1279,4 +1279,9 @@ a.cp_btn11:active:after {
 
 .privacy {
   margin-top: 5%;
+}
+
+.card-img {
+width: 31%;
+height: auto;
 }

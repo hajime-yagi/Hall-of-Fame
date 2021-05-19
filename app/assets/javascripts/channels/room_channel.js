@@ -13,20 +13,9 @@ document.addEventListener('turbolinks:load', () => {
     App.room.unsubscribe();
     });
 
-    // reloadの応用方法
-// キャッシュを利用してリロードする方法
-function doReloadWithCache() {
- 
-    // キャッシュを利用してリロード
-    window.location.reload(true);
- 
-}
- 
-window.addEventListener('load', function () {
- 
-    // ページ表示完了した5秒後にリロード
-    setTimeout(doReloadWithCache, 30000);
- 
+    const timer = 6000    // ミリ秒で間隔の時間を指定
+window.addEventListener('load',function(){
+  setInterval('location.reload()',timer);
 });
     
 
@@ -140,6 +129,13 @@ messageButton.addEventListener('click', () => {
      }
  }, {passive: true});
  
+ 
+ 
+  
+     
+  
+ 
+  
 
 
 })
