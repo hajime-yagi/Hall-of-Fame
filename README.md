@@ -44,26 +44,26 @@ https://drive.google.com/file/d/15K_T5DFw8jVziOJay8tUN5BqkJ5Y6A6o/view?usp=shari
 
 ## 使用技術
 バックエンド
-Ruby 2.7.3
-Rails 5.2.5
-Rspec 4.0.2
+- Ruby 2.7.3
+- Rails 5.2.5
+- Rspec 4.0.2
 ## 機能における主要な Gem
-bootstrap
-font-awesome-sass
-jquery-rails
-sorcery
-ransack
-kaminari
-dotenv-rails
-whenever
+- bootstrap
+- font-awesome-sass
+- jquery-rails
+- sorcery
+- ransack
+- kaminari
+- dotenv-rails
+- whenever
 ## インフラストラクチャー
-Nginx
-unicorn
-AWS
-VPC
-EC2
-Amazon Linux 2
-S3
-ALB
-Route53
-ACM
+- Nginx
+- unicorn
+- AWS
+- VPC
+- EC2
+- Amazon Linux 2
+- S3
+- ALB
+- Route53
+- ACM
