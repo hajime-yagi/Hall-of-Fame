@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class FanRanksController < ApplicationController
+  skip_before_action :require_login
   def index
     user = current_user.favorite_team
     case user

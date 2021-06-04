@@ -48,8 +48,8 @@ namespace :update_game do
     @stadium2 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[2]/a/p/span')
     @stadium2.nil? || @stadium2 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[2]/a/p/span').inner_text
 
-    @stadium3 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[3]/a/p/span')
-    @stadium3.nil? || @stadium3 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[3]/a/p/span').inner_text
+    @stadium3 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[3]/a/p/span')
+    @stadium3.nil? || @stadium3 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[3]/a/p/span').inner_text
 
     @stadium4 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/p/span')
     @stadium4.nil? || @stadium4 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/p/span').inner_text
@@ -88,24 +88,24 @@ namespace :update_game do
 
     @time4 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[2]/div/time')
     @time4.nil? || @time4 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[2]/div/time').inner_text
-    @score7 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[2]/div/p[1]/span[1]')
-    @score7.nil? || @score7 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[2]/div/p[1]/span[1]').inner_text.to_i
-    @score8 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[2]/div/p[1]/span[3]')
-    @score8.nil? || @score8 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[1]/a/div[2]/div/p[1]/span[3]').inner_text.to_i
+    @score7 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[4]/a/div[2]/div/p[1]/span[1]')
+    @score7.nil? || @score7 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[4]/a/div[2]/div/p[1]/span[1]').inner_text.to_i
+    @score8 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[4]/a/div[2]/div/p[1]/span[3]')
+    @score8.nil? || @score8 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[4]/a/div[2]/div/p[1]/span[3]').inner_text.to_i
 
     @time5 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[2]/div/time')
     @time5.nil? || @time5 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[2]/div/time').inner_text
-    @score9 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[2]/div/p[1]/span[1]')
-    @score9.nil? || @score9 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[2]/div/p[1]/span[1]').inner_text.to_i
-    @score10 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[2]/div/p[1]/span[3]')
-    @score10.nil? || @score10 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[2]/a/div[2]/div/p[1]/span[3]').inner_text.to_i
+    @score9 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[5]/a/div[2]/div/p[1]/span[1]').inner_text.to_i
+    @score9.nil? || @score9 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[5]/a/div[2]/div/p[1]/span[1]').inner_text.to_i
+    @score10 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[5]/a/div[2]/div/p[1]/span[3]')
+    @score10.nil? || @score10 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[5]/a/div[2]/div/p[1]/span[3]').inner_text.to_i
 
     @time6 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/div/time')
     @time6.nil? || @time6 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/div/time').inner_text
-    @score11 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/div/p[1]/span[1]')
-    @score11.nil? || @score11 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/div/p[1]/span[1]').inner_text.to_i
-    @score12 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/div/p[1]/span[3]')
-    @score12.nil? || @score12 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[2]/ul/li[3]/a/div[2]/div/p[1]/span[3]').inner_text.to_i
+    @score11 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[6]/a/div[2]/div/p[1]/span[1]')
+    @score11.nil? || @score11 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[6]/a/div[2]/div/p[1]/span[1]').inner_text.to_i
+    @score12 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[6]/a/div[2]/div/p[1]/span[3]')
+    @score12.nil? || @score12 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section/ul/li[6]/a/div[2]/div/p[1]/span[3]').inner_text.to_i
 
     @status1 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[1]/a/div[2]/div/p[2]')
     @status1.nil? || @status1 = page.at('/html/body/div/div/div/main/div/div[1]/section[3]/div/section[1]/ul/li[1]/a/div[2]/div/p[2]').inner_text

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  skip_before_action :require_login, only: %i[new create]
+  skip_before_action :require_login, only: %i[new create index]
   def index
     @q = User.ransack(params[:q])
     @users = @q.result(distinct: true).page(params[:page])
