@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class TeamRanksController < ApplicationController
+  skip_before_action :require_login
   def index
     @giants = User.giants.all.sum(:point)
     @tigers = User.tigers.all.sum(:point)

@@ -13,10 +13,7 @@ document.addEventListener('turbolinks:load', () => {
     App.room.unsubscribe();
     });
 
-    const timer = 6000    // ミリ秒で間隔の時間を指定
-window.addEventListener('load',function(){
-  setInterval('location.reload()',timer);
-});
+
     
 
 

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ExpectsController < ApplicationController
-  before_action :require_login
+  before_action :require_login, only: %i[new create edit update]
 
   def index
     @q = Expect.ransack(params[:q])

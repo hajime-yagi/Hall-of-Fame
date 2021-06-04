@@ -19,7 +19,7 @@
 </thead>
 <tbody>
     <tr>
-       <% @games.zip(@expects) do |g,e| %>
+       <% @games.each do |g| %>
         <td><%= g.status  %></td>
         <td><%= g.team_a %>-<%= g.team_b %></td>
         <td><%= g.match_time %></td>
